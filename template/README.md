@@ -1,18 +1,18 @@
-# Template — página de privacidade e transparência
+# Template,  página de privacidade e transparência
 
 Starter de **uma página** em HTML e CSS puros, sem build, sem dependências e sem rastreamento. Serve para publicar rapidamente uma política de privacidade legível e um resumo de governança.
 
-> **Modelo — adapte e revise antes de publicar.** O texto é um ponto de partida, não um parecer jurídico e não garante conformidade com a LGPD.
+> **Modelo,  adapte e revise antes de publicar.** O texto é um ponto de partida, não um parecer jurídico e não garante conformidade com a LGPD.
 
 ## Como usar
 
 1. Copie `index.html` para o seu projeto.
 2. Substitua todos os marcadores entre colchetes (lista abaixo).
-3. Apague as seções que não se aplicam — texto genérico que não corresponde à realidade é pior do que ausência de texto.
+3. Apague as seções que não se aplicam,  texto genérico que não corresponde à realidade é pior do que ausência de texto.
 4. Revise com apoio jurídico antes de uso comercial.
 5. Publique em qualquer host estático (Cloudflare Pages, GitHub Pages, Netlify, S3).
 
-O arquivo é autocontido: o CSS está em um bloco `<style>`. As fontes Geist são carregadas de `../public/fonts/` por caminho relativo (para pré-visualizar dentro do repositório). Ao copiar o template para outro projeto, leve a pasta `fonts/` junto e ajuste os caminhos — ou remova os `@font-face` para usar a fonte do sistema. Se você for publicar com a CSP restritiva do conjunto completo (`public/_headers`, que usa `style-src 'self'`), mova o bloco para um arquivo `styles.css` e troque por `<link rel="stylesheet" href="/styles.css">`.
+O arquivo é autocontido: o CSS está em um bloco `<style>`. As fontes Geist são carregadas de `../public/fonts/` por caminho relativo (para pré-visualizar dentro do repositório). Ao copiar o template para outro projeto, leve a pasta `fonts/` junto e ajuste os caminhos,  ou remova os `@font-face` para usar a fonte do sistema. Se você for publicar com a CSP restritiva do conjunto completo (`public/_headers`, que usa `style-src 'self'`), mova o bloco para um arquivo `styles.css` e troque por `<link rel="stylesheet" href="/styles.css">`.
 
 ## Marcadores
 

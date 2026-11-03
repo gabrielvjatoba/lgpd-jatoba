@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Jatobá Lab — Transparência & LGPD
+   Jatobá Lab, Transparência & LGPD
    CSS único, estático, sem dependências.
    Tipografia: Geist Sans + Geist Mono (self-hosted, OFL 1.1).
    ========================================================================== */
@@ -75,15 +75,15 @@
   --border: #e7e5e4;
   --border-strong: #d6d3d1;
   --input: #e7e5e4;
-  --primary: #14532d;
-  --primary-foreground: #fafaf9;
-  --primary-hover: #166534;
-  --primary-soft: #ecfdf3;
-  --ring: #16a34a;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --primary-hover: #333333;
+  --primary-soft: #f5f5f4;
+  --ring: #111111;
 
-  --warning: #92400e;
-  --warning-soft: #fffbeb;
-  --warning-border: #fde68a;
+  --warning: #111111;
+  --warning-soft: #f5f5f4;
+  --warning-border: #d6d3d1;
 
   --radius: 0.875rem;
   --radius-sm: 0.5rem;
@@ -114,15 +114,15 @@
     --border: #292524;
     --border-strong: #44403c;
     --input: #292524;
-    --primary: #86efac;
-    --primary-foreground: #052e16;
-    --primary-hover: #bbf7d0;
-    --primary-soft: #0f2319;
-    --ring: #4ade80;
+    --primary: #f5f5f4;
+    --primary-foreground: #0c0a09;
+    --primary-hover: #d6d3d1;
+    --primary-soft: #1c1917;
+    --ring: #f5f5f4;
 
-    --warning: #fcd34d;
-    --warning-soft: #1c1508;
-    --warning-border: #42300a;
+    --warning: #f5f5f4;
+    --warning-soft: #1c1917;
+    --warning-border: #44403c;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 12px 28px -14px rgba(0, 0, 0, 0.7),
@@ -249,54 +249,12 @@ hr {
 
 /* ---------- Tipografia utilitária ---------- */
 
-.eyebrow {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-}
-
 .lead {
   font-size: 1.125rem;
   line-height: 1.65;
   color: var(--muted-foreground);
   max-width: 40rem;
   margin: 0 0 1.5rem;
-}
-
-/* ---------- Badges ---------- */
-
-.badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0 0 1.75rem;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.6rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--muted-foreground);
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.badge-accent {
-  background: var(--primary-soft);
-  border-color: color-mix(in srgb, var(--primary) 22%, var(--border));
-  color: var(--primary);
 }
 
 /* ---------- Botões ---------- */
@@ -402,15 +360,6 @@ hr {
   font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-}
-
-.brand-sub {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
 }
 
 .site-nav {
@@ -530,10 +479,7 @@ hr {
 
 .meta-line {
   margin: 1.75rem 0 0;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
   color: var(--muted-foreground);
 }
 
@@ -561,11 +507,8 @@ hr {
 }
 
 .ficha-title {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--muted-foreground);
   margin: 1rem 0 0.25rem;
 }
@@ -587,11 +530,8 @@ hr {
 }
 
 .ficha dt {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
   color: var(--muted-foreground);
   padding-top: 0.2rem;
 }
@@ -713,17 +653,6 @@ hr {
   color: inherit;
 }
 
-.card-kicker {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-  margin-bottom: 0.9rem;
-}
-
 .card-link h3 {
   font-size: 1.0625rem;
   letter-spacing: -0.02em;
@@ -760,16 +689,6 @@ hr {
 .feature {
   background: var(--card);
   padding: 1.5rem;
-}
-
-.feature-index {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  color: var(--muted-foreground);
-  margin-bottom: 1.5rem;
 }
 
 .feature h3 {
@@ -852,10 +771,6 @@ hr {
   max-width: 36rem;
 }
 
-.cta-band .eyebrow {
-  margin-bottom: 0.6rem;
-}
-
 @media (max-width: 640px) {
   .cta-band {
     padding: 1.75rem;
@@ -887,11 +802,8 @@ hr {
 }
 
 .toc-title {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--muted-foreground);
   margin: 0 0 0.9rem;
 }
@@ -935,18 +847,14 @@ hr {
     position: static;
     max-height: none;
     overflow: visible;
-    padding: 1.25rem 1.35rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--card);
+    padding: 0 0 1.25rem;
+    border-bottom: 1px solid var(--border);
   }
 
   .toc ol {
     display: flex;
-    max-width: 100%;
-    gap: 0.4rem;
+    gap: 1rem;
     overflow-x: auto;
-    padding-bottom: 0.15rem;
     border-left: 0;
     scrollbar-width: none;
   }
@@ -960,16 +868,14 @@ hr {
   }
 
   .toc a {
-    padding: 0.3rem 0.65rem;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--muted);
-    font-size: 0.75rem;
+    padding: 0.2rem 0;
+    border-left: 0;
+    font-size: 0.8125rem;
     white-space: nowrap;
   }
 
   .toc a:hover {
-    border-color: var(--border-strong);
+    border-left-color: transparent;
   }
 }
 
@@ -1013,14 +919,9 @@ hr {
 }
 
 .prose h2::before {
-  content: counter(section, decimal-leading-zero);
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  content: counter(section) ". ";
   color: var(--muted-foreground);
-  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .prose h3 {
@@ -1091,11 +992,8 @@ hr {
 .deflist dt {
   padding: 0.85rem 1rem 0.85rem 0;
   border-bottom: 1px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 600;
   line-height: 1.5;
   color: var(--muted-foreground);
 }
@@ -1170,11 +1068,8 @@ caption {
 thead th {
   background: var(--muted);
   color: var(--muted-foreground);
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-align: left;
   padding: 0.65rem 0.75rem;
   border-bottom: 1px solid var(--border);
@@ -1243,65 +1138,34 @@ td a {
 .callout {
   margin: 1.75rem 0;
   padding: 1.15rem 1.35rem;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--primary);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  background: var(--primary-soft);
+  background: var(--card);
 }
 
 .callout.warn {
-  border-left-color: var(--warning);
-  background: var(--warning-soft);
-  border-color: var(--warning-border);
+  border-color: var(--border-strong);
+  background: var(--card);
 }
 
 .callout-title {
   display: block;
   margin-bottom: 0.35rem;
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--primary);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--foreground);
 }
 
 .callout.warn .callout-title {
-  color: var(--warning);
+  color: var(--foreground);
 }
 
 .callout p:last-child,
 .callout ul:last-child {
   margin-bottom: 0;
-}
-
-/* ---------- Pills de status nas tabelas ---------- */
-
-.pill {
-  display: inline-block;
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--muted-foreground);
-  background: var(--card);
-}
-
-.pill.ok {
-  border-color: color-mix(in srgb, var(--primary) 30%, var(--border));
-  background: var(--primary-soft);
-  color: var(--primary);
-}
-
-.pill.open {
-  border-color: var(--warning-border);
-  background: var(--warning-soft);
-  color: var(--warning);
 }
 
 /* ---------- 404 ---------- */
@@ -1368,11 +1232,8 @@ td a {
 }
 
 .footer-label {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--muted-foreground);
   margin: 0 0 0.9rem;
 }

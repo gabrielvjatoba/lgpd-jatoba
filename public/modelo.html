@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Modelo de página de transparência — Jatobá Lab</title>
+<title>Modelo de página de transparência | Jatobá Lab</title>
 <meta name="description" content="Este repositório é um modelo reutilizável de página de transparência e LGPD. Veja a estrutura, o que trocar e o checklist antes de publicar.">
 <link rel="canonical" href="https://lgpd.jatoba.tech/modelo">
 <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Modelo de página de transparência — Jatobá Lab">
+<meta property="og:title" content="Modelo de página de transparência | Jatobá Lab">
 <meta property="og:description" content="Como reutilizar este site como base para a sua própria página de transparência e LGPD.">
 <meta property="og:url" content="https://lgpd.jatoba.tech/modelo">
 <link rel="preload" href="/fonts/geist-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,11 +21,10 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Jatobá Lab — início">
+    <a class="brand" href="/" aria-label="Jatobá Lab, início">
       <span class="brand-mark" aria-hidden="true">J</span>
       <span class="brand-stack">
         <span class="brand-name">Jatobá Lab</span>
-        <span class="brand-sub">Transparência &amp; LGPD</span>
       </span>
     </a>
     <nav class="site-nav" aria-label="Navegação principal">
@@ -59,10 +58,9 @@
 
     <article class="prose">
       <header class="doc-head">
-        <p class="eyebrow">Código aberto</p>
         <h1>Este site também é um modelo</h1>
-        <p class="lead">O repositório <code>lgpd-jatoba</code> foi desenhado para ser copiado. Ele entrega uma página de transparência completa em HTML e CSS puros, sem build, sem dependências e sem rastreamento — o tipo de base que dá para publicar em cinco minutos e revisar em uma tarde.</p>
-        <div class="meta-row"><span class="badge badge-accent">Versão 1.0</span><span class="badge">Atualizado em 3 de novembro de 2026</span><span class="badge">Licença MIT</span></div>
+        <p class="lead">O repositório <code>lgpd-jatoba</code> foi desenhado para ser copiado. Ele entrega uma página de transparência completa em HTML e CSS puros, sem build, sem dependências e sem rastreamento, o tipo de base que dá para publicar em cinco minutos e revisar em uma tarde.</p>
+        <p class="meta-line">Versão 1.0 · Atualizado em 3 de novembro de 2026 · Licença MIT</p>
       </header>
 
       <div class="callout warn">
@@ -99,7 +97,7 @@
         <li><strong>Substitua os marcadores.</strong> Todos seguem o formato <code>[NOME]</code> e aparecem no HTML e no README do template.</li>
         <li><strong>Remova seções que não se aplicam.</strong> Se você não usa IA, apague a seção de IA. Se não transfere dados, apague a seção de transferência internacional. Texto genérico que não corresponde à realidade é pior do que ausência de texto.</li>
         <li><strong>Ajuste prazos e fornecedores.</strong> Retenção, suboperadores e bases legais precisam refletir a sua operação, não a do Jatobá Lab.</li>
-        <li><strong>Revise os cabeçalhos.</strong> Se você adicionar JavaScript ou estilos inline, precisará ajustar a CSP em <code>_headers</code> — e talvez repensar a decisão.</li>
+        <li><strong>Revise os cabeçalhos.</strong> Se você adicionar JavaScript ou estilos inline, precisará ajustar a CSP em <code>_headers</code>, e talvez repensar a decisão.</li>
         <li><strong>Publique.</strong> Qualquer host estático serve: Cloudflare Pages, GitHub Pages, Netlify, S3. Em Cloudflare Pages, basta apontar para a pasta <code>public/</code>.</li>
         <li><strong>Revise com um profissional</strong> antes de usar comercialmente, contratar equipe ou tratar dados sensíveis.</li>
       </ol>
@@ -130,7 +128,7 @@
         <li>Todos os marcadores <code>[ ]</code> foram substituídos?</li>
         <li>O controlador e o DPO existem e têm canal monitorado?</li>
         <li>As bases legais correspondem ao que o produto realmente faz?</li>
-        <li>Os prazos de retenção são executáveis — existe rotina de expurgo?</li>
+        <li>Os prazos de retenção são executáveis? Existe rotina de expurgo?</li>
         <li>A lista de fornecedores está atualizada e inclui todos os que veem dados?</li>
         <li>A seção de transferência internacional reflete os países reais?</li>
         <li>Se há IA: prompts, memória, logs e retenção estão descritos com precisão?</li>
@@ -146,7 +144,7 @@
       <p>A marca “Jatobá Lab”, a identidade visual e o nome de Gabriel Jatobá não são licenciados para sugerir endosso. Se você adaptar o modelo, troque a marca.</p>
 
       <h2 id="template">Starter de uma página</h2>
-      <p>Se você precisa de algo menor, o arquivo <code>template/index.html</code> traz uma página única com as seções essenciais e um banner de “Modelo — adapte e revise antes de publicar”. O <code>template/README.md</code> tem o checklist correspondente.</p>
+      <p>Se você precisa de algo menor, o arquivo <code>template/index.html</code> traz uma página única com as seções essenciais e um banner “Modelo: adapte e revise antes de publicar”. O <code>template/README.md</code> tem o checklist correspondente.</p>
       <div class="callout">
         <span class="callout-title">Sugestão de fluxo</span>
         <p>Comece pelo template de uma página para validar o conteúdo com o time. Só depois expanda para o conjunto completo de <code>public/</code>. É mais fácil revisar texto curto do que reescrever cinco páginas.</p>
@@ -159,11 +157,10 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Jatobá Lab — início">
+        <a class="brand" href="/" aria-label="Jatobá Lab, início">
           <span class="brand-mark" aria-hidden="true">J</span>
           <span class="brand-stack">
             <span class="brand-name">Jatobá Lab</span>
-            <span class="brand-sub">Transparência &amp; LGPD</span>
           </span>
         </a>
         <p>Projeto pessoal de Gabriel Jatobá. Brasil. Canal permanente de transparência sobre dados pessoais, termos de uso e governança de LGPD.</p>
