@@ -6,21 +6,27 @@
 <title>Modelo de página de transparência — Jatobá Lab</title>
 <meta name="description" content="Este repositório é um modelo reutilizável de página de transparência e LGPD. Veja a estrutura, o que trocar e o checklist antes de publicar.">
 <link rel="canonical" href="https://lgpd.jatoba.tech/modelo">
-<meta name="theme-color" content="#175c46">
+<meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modelo de página de transparência — Jatobá Lab">
 <meta property="og:description" content="Como reutilizar este site como base para a sua própria página de transparência e LGPD.">
 <meta property="og:url" content="https://lgpd.jatoba.tech/modelo">
+<link rel="preload" href="/fonts/geist-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">JL</span>
-      <span class="brand-text">Jatobá Lab<span class="brand-sub">Transparência &amp; LGPD</span></span>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Jatobá Lab — início">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-stack">
+        <span class="brand-name">Jatobá Lab</span>
+        <span class="brand-sub">Transparência &amp; LGPD</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Navegação principal">
       <ul>
@@ -31,122 +37,161 @@
         <li><a href="/modelo" aria-current="page">Modelo</a></li>
       </ul>
     </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="mailto:gabrielvjatoba@gmail.com">Falar com o DPO</a>
   </div>
 </header>
 
 <main id="conteudo">
-  <div class="wrap">
-    <p class="eyebrow">Código aberto</p>
-    <h1>Este site também é um modelo</h1>
-    <p class="lead">O repositório <code>lgpd-jatoba</code> foi desenhado para ser copiado. Ele entrega uma página de transparência completa em HTML e CSS puros, sem build, sem dependências e sem rastreamento — o tipo de base que dá para publicar em cinco minutos e revisar em uma tarde.</p>
-    <p class="meta">Versão <strong>1.0</strong> · Última atualização: <strong>3 de novembro de 2026</strong> · Licença MIT</p>
+  <div class="container doc-layout">
+    <aside class="doc-aside">
+      <nav class="toc" aria-labelledby="toc-title">
+        <p class="toc-title" id="toc-title">Nesta página</p>
+        <ol>
+          <li><a href="#estrutura">O que vem no repositório</a></li>
+          <li><a href="#usar">Como usar</a></li>
+          <li><a href="#trocar">O que precisa ser trocado</a></li>
+          <li><a href="#checklist">Checklist antes de publicar</a></li>
+          <li><a href="#licenca">Licença e atribuição</a></li>
+          <li><a href="#template">Starter de uma página</a></li>
+        </ol>
+      </nav>
+    </aside>
 
-    <div class="callout warn">
-      <span class="callout-title">Modelo não é parecer jurídico</span>
-      <p>Copiar este repositório não torna ninguém conforme à LGPD. O texto é um ponto de partida baseado em boas práticas e em artigos da lei, mas cada operação tem finalidades, bases legais e riscos próprios. Substitua os dados entre colchetes, remova o que não se aplica e revise com quem entende do seu caso.</p>
-    </div>
+    <article class="prose">
+      <header class="doc-head">
+        <p class="eyebrow">Código aberto</p>
+        <h1>Este site também é um modelo</h1>
+        <p class="lead">O repositório <code>lgpd-jatoba</code> foi desenhado para ser copiado. Ele entrega uma página de transparência completa em HTML e CSS puros, sem build, sem dependências e sem rastreamento — o tipo de base que dá para publicar em cinco minutos e revisar em uma tarde.</p>
+        <div class="meta-row"><span class="badge badge-accent">Versão 1.0</span><span class="badge">Atualizado em 3 de novembro de 2026</span><span class="badge">Licença MIT</span></div>
+      </header>
 
-    <h2 id="estrutura">1. O que vem no repositório</h2>
-    <div class="table-scroll">
-      <table>
-        <caption>Arquivos e para que servem.</caption>
-        <thead>
-          <tr><th scope="col">Caminho</th><th scope="col">Conteúdo</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row"><code>public/index.html</code></th><td>Página inicial com resumo do controlador, DPO e status do projeto.</td></tr>
-          <tr><th scope="row"><code>public/privacidade.html</code></th><td>Política de privacidade completa, com dados, bases legais, IA, retenção e direitos.</td></tr>
-          <tr><th scope="row"><code>public/termos.html</code></th><td>Termos de uso, incluindo limites de IA e responsabilidade.</td></tr>
-          <tr><th scope="row"><code>public/lgpd.html</code></th><td>Governança: papéis, resumo do ROPA, RIPD, DSAR, incidentes e lacunas.</td></tr>
-          <tr><th scope="row"><code>public/modelo.html</code></th><td>Esta página, que explica o uso como template.</td></tr>
-          <tr><th scope="row"><code>public/styles.css</code></th><td>Folha de estilo única, com modo escuro automático e estilos de impressão.</td></tr>
-          <tr><th scope="row"><code>public/_headers</code></th><td>Cabeçalhos de segurança para Cloudflare Pages (CSP, HSTS, nosniff etc.).</td></tr>
-          <tr><th scope="row"><code>public/.well-known/security.txt</code></th><td>Canal para relato de vulnerabilidades.</td></tr>
-          <tr><th scope="row"><code>template/index.html</code></th><td>Starter de uma página, com marcadores como <code>[CONTROLADOR]</code>.</td></tr>
-          <tr><th scope="row"><code>template/README.md</code></th><td>Checklist de adaptação antes de publicar.</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="callout warn">
+        <span class="callout-title">Modelo não é parecer jurídico</span>
+        <p>Copiar este repositório não torna ninguém conforme à LGPD. O texto é um ponto de partida baseado em boas práticas e em artigos da lei, mas cada operação tem finalidades, bases legais e riscos próprios. Substitua os dados entre colchetes, remova o que não se aplica e revise com quem entende do seu caso.</p>
+      </div>
 
-    <h2 id="usar">2. Como usar</h2>
-    <ol>
-      <li><strong>Copie o repositório</strong> ou use o botão “Use this template” no GitHub. Não faça fork se quiser um histórico limpo.</li>
-      <li><strong>Escolha o ponto de partida:</strong> <code>template/index.html</code> para uma página só, ou <code>public/</code> para o conjunto completo.</li>
-      <li><strong>Substitua os marcadores.</strong> Todos seguem o formato <code>[NOME]</code> e aparecem no HTML e no README do template.</li>
-      <li><strong>Remova seções que não se aplicam.</strong> Se você não usa IA, apague a seção de IA. Se não transfere dados, apague a seção de transferência internacional. Texto genérico que não corresponde à realidade é pior do que ausência de texto.</li>
-      <li><strong>Ajuste prazos e fornecedores.</strong> Retenção, suboperadores e bases legais precisam refletir a sua operação, não a do Jatobá Lab.</li>
-      <li><strong>Revise os cabeçalhos.</strong> Se você adicionar JavaScript ou estilos inline, precisará ajustar a CSP em <code>_headers</code> — e talvez repensar a decisão.</li>
-      <li><strong>Publique.</strong> Qualquer host estático serve: Cloudflare Pages, GitHub Pages, Netlify, S3. Em Cloudflare Pages, basta apontar para a pasta <code>public/</code>.</li>
-      <li><strong>Revise com um profissional</strong> antes de usar comercialmente, contratar equipe ou tratar dados sensíveis.</li>
-    </ol>
+      <h2 id="estrutura">O que vem no repositório</h2>
+      <div class="table-scroll">
+        <table>
+          <caption>Arquivos e para que servem.</caption>
+          <thead>
+            <tr><th scope="col">Caminho</th><th scope="col">Conteúdo</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><code>public/index.html</code></th><td>Página inicial com resumo do controlador, DPO e status do projeto.</td></tr>
+            <tr><th scope="row"><code>public/privacidade.html</code></th><td>Política de privacidade completa, com dados, bases legais, IA, retenção e direitos.</td></tr>
+            <tr><th scope="row"><code>public/termos.html</code></th><td>Termos de uso, incluindo limites de IA e responsabilidade.</td></tr>
+            <tr><th scope="row"><code>public/lgpd.html</code></th><td>Governança: papéis, resumo do ROPA, RIPD, DSAR, incidentes e lacunas.</td></tr>
+            <tr><th scope="row"><code>public/modelo.html</code></th><td>Esta página, que explica o uso como template.</td></tr>
+            <tr><th scope="row"><code>public/styles.css</code></th><td>Folha de estilo única, com modo escuro automático e estilos de impressão.</td></tr>
+            <tr><th scope="row"><code>public/_headers</code></th><td>Cabeçalhos de segurança para Cloudflare Pages (CSP, HSTS, nosniff etc.).</td></tr>
+            <tr><th scope="row"><code>public/.well-known/security.txt</code></th><td>Canal para relato de vulnerabilidades.</td></tr>
+            <tr><th scope="row"><code>template/index.html</code></th><td>Starter de uma página, com marcadores como <code>[CONTROLADOR]</code>.</td></tr>
+            <tr><th scope="row"><code>template/README.md</code></th><td>Checklist de adaptação antes de publicar.</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-    <h2 id="trocar">3. O que precisa ser trocado</h2>
-    <div class="table-scroll">
-      <table>
-        <caption>Checklist mínimo de substituição.</caption>
-        <thead>
-          <tr><th scope="col">Marcador</th><th scope="col">O que colocar</th><th scope="col">Onde aparece</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row"><code>[CONTROLADOR]</code></th><td>Razão social ou nome completo</td><td>Home, privacidade, termos, rodapé</td></tr>
-          <tr><th scope="row"><code>[CNPJ]</code></th><td>CNPJ ou “pessoa física”</td><td>Home, privacidade</td></tr>
-          <tr><th scope="row"><code>[DPO]</code></th><td>Nome do encarregado</td><td>Home, privacidade, LGPD</td></tr>
-          <tr><th scope="row"><code>[EMAIL]</code></th><td>E-mail de privacidade monitorado</td><td>Todas as páginas</td></tr>
-          <tr><th scope="row"><code>[ENDEREÇO]</code></th><td>Endereço ou “Brasil”</td><td>Home, privacidade</td></tr>
-          <tr><th scope="row"><code>[PROVEDORES]</code></th><td>Hospedagem, CDN, e-mail, IA</td><td>Privacidade, LGPD</td></tr>
-          <tr><th scope="row"><code>[PAÍSES]</code></th><td>Onde os dados são tratados</td><td>Transferência internacional</td></tr>
-          <tr><th scope="row"><code>[PRAZOS]</code></th><td>Retenção real por categoria</td><td>Privacidade, LGPD</td></tr>
-          <tr><th scope="row"><code>[DOMÍNIO]</code></th><td>URL canônica do site</td><td>Metatags, sitemap, robots, security.txt</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <h2 id="usar">Como usar</h2>
+      <ol>
+        <li><strong>Copie o repositório</strong> ou use o botão “Use this template” no GitHub. Não faça fork se quiser um histórico limpo.</li>
+        <li><strong>Escolha o ponto de partida:</strong> <code>template/index.html</code> para uma página só, ou <code>public/</code> para o conjunto completo.</li>
+        <li><strong>Substitua os marcadores.</strong> Todos seguem o formato <code>[NOME]</code> e aparecem no HTML e no README do template.</li>
+        <li><strong>Remova seções que não se aplicam.</strong> Se você não usa IA, apague a seção de IA. Se não transfere dados, apague a seção de transferência internacional. Texto genérico que não corresponde à realidade é pior do que ausência de texto.</li>
+        <li><strong>Ajuste prazos e fornecedores.</strong> Retenção, suboperadores e bases legais precisam refletir a sua operação, não a do Jatobá Lab.</li>
+        <li><strong>Revise os cabeçalhos.</strong> Se você adicionar JavaScript ou estilos inline, precisará ajustar a CSP em <code>_headers</code> — e talvez repensar a decisão.</li>
+        <li><strong>Publique.</strong> Qualquer host estático serve: Cloudflare Pages, GitHub Pages, Netlify, S3. Em Cloudflare Pages, basta apontar para a pasta <code>public/</code>.</li>
+        <li><strong>Revise com um profissional</strong> antes de usar comercialmente, contratar equipe ou tratar dados sensíveis.</li>
+      </ol>
 
-    <h2 id="checklist">4. Checklist antes de publicar</h2>
-    <ul>
-      <li>Todos os marcadores <code>[ ]</code> foram substituídos?</li>
-      <li>O controlador e o DPO existem e têm canal monitorado?</li>
-      <li>As bases legais correspondem ao que o produto realmente faz?</li>
-      <li>Os prazos de retenção são executáveis — existe rotina de expurgo?</li>
-      <li>A lista de fornecedores está atualizada e inclui todos os que veem dados?</li>
-      <li>A seção de transferência internacional reflete os países reais?</li>
-      <li>Se há IA: prompts, memória, logs e retenção estão descritos com precisão?</li>
-      <li>Os termos têm foro e limitação de responsabilidade adequados ao seu caso?</li>
-      <li>A CSP em <code>_headers</code> funciona com o site (sem bloquear CSS ou imagens)?</li>
-      <li><code>security.txt</code> tem e-mail válido e data de expiração futura?</li>
-      <li>O site passa em navegação por teclado e leitor de tela?</li>
-      <li>Alguém com conhecimento jurídico revisou o conjunto?</li>
-    </ul>
+      <h2 id="trocar">O que precisa ser trocado</h2>
+      <div class="table-scroll">
+        <table>
+          <caption>Checklist mínimo de substituição.</caption>
+          <thead>
+            <tr><th scope="col">Marcador</th><th scope="col">O que colocar</th><th scope="col">Onde aparece</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><code>[CONTROLADOR]</code></th><td>Razão social ou nome completo</td><td>Home, privacidade, termos, rodapé</td></tr>
+            <tr><th scope="row"><code>[CNPJ]</code></th><td>CNPJ ou “pessoa física”</td><td>Home, privacidade</td></tr>
+            <tr><th scope="row"><code>[DPO]</code></th><td>Nome do encarregado</td><td>Home, privacidade, LGPD</td></tr>
+            <tr><th scope="row"><code>[EMAIL]</code></th><td>E-mail de privacidade monitorado</td><td>Todas as páginas</td></tr>
+            <tr><th scope="row"><code>[ENDEREÇO]</code></th><td>Endereço ou “Brasil”</td><td>Home, privacidade</td></tr>
+            <tr><th scope="row"><code>[PROVEDORES]</code></th><td>Hospedagem, CDN, e-mail, IA</td><td>Privacidade, LGPD</td></tr>
+            <tr><th scope="row"><code>[PAÍSES]</code></th><td>Onde os dados são tratados</td><td>Transferência internacional</td></tr>
+            <tr><th scope="row"><code>[PRAZOS]</code></th><td>Retenção real por categoria</td><td>Privacidade, LGPD</td></tr>
+            <tr><th scope="row"><code>[DOMÍNIO]</code></th><td>URL canônica do site</td><td>Metatags, sitemap, robots, security.txt</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-    <h2 id="licenca">5. Licença e atribuição</h2>
-    <p>O código e os textos deste repositório são disponibilizados sob a licença MIT. Você pode copiar, modificar e usar comercialmente, mantendo o aviso de copyright. A atribuição é apreciada, mas não obrigatória para uso privado.</p>
-    <p>A marca “Jatobá Lab”, a identidade visual e o nome de Gabriel Jatobá não são licenciados para sugerir endosso. Se você adaptar o modelo, troque a marca.</p>
+      <h2 id="checklist">Checklist antes de publicar</h2>
+      <ul>
+        <li>Todos os marcadores <code>[ ]</code> foram substituídos?</li>
+        <li>O controlador e o DPO existem e têm canal monitorado?</li>
+        <li>As bases legais correspondem ao que o produto realmente faz?</li>
+        <li>Os prazos de retenção são executáveis — existe rotina de expurgo?</li>
+        <li>A lista de fornecedores está atualizada e inclui todos os que veem dados?</li>
+        <li>A seção de transferência internacional reflete os países reais?</li>
+        <li>Se há IA: prompts, memória, logs e retenção estão descritos com precisão?</li>
+        <li>Os termos têm foro e limitação de responsabilidade adequados ao seu caso?</li>
+        <li>A CSP em <code>_headers</code> funciona com o site (sem bloquear CSS ou imagens)?</li>
+        <li><code>security.txt</code> tem e-mail válido e data de expiração futura?</li>
+        <li>O site passa em navegação por teclado e leitor de tela?</li>
+        <li>Alguém com conhecimento jurídico revisou o conjunto?</li>
+      </ul>
 
-    <h2 id="template">6. Starter de uma página</h2>
-    <p>Se você precisa de algo menor, o arquivo <code>template/index.html</code> traz uma página única com as seções essenciais e um banner de “Modelo — adapte e revise antes de publicar”. O <code>template/README.md</code> tem o checklist correspondente.</p>
-    <div class="callout">
-      <span class="callout-title">Sugestão de fluxo</span>
-      <p>Comece pelo template de uma página para validar o conteúdo com o time. Só depois expanda para o conjunto completo de <code>public/</code>. É mais fácil revisar texto curto do que reescrever cinco páginas.</p>
-    </div>
+      <h2 id="licenca">Licença e atribuição</h2>
+      <p>O código e os textos deste repositório são disponibilizados sob a licença MIT. Você pode copiar, modificar e usar comercialmente, mantendo o aviso de copyright. A atribuição é apreciada, mas não obrigatória para uso privado.</p>
+      <p>A marca “Jatobá Lab”, a identidade visual e o nome de Gabriel Jatobá não são licenciados para sugerir endosso. Se você adaptar o modelo, troque a marca.</p>
+
+      <h2 id="template">Starter de uma página</h2>
+      <p>Se você precisa de algo menor, o arquivo <code>template/index.html</code> traz uma página única com as seções essenciais e um banner de “Modelo — adapte e revise antes de publicar”. O <code>template/README.md</code> tem o checklist correspondente.</p>
+      <div class="callout">
+        <span class="callout-title">Sugestão de fluxo</span>
+        <p>Comece pelo template de uma página para validar o conteúdo com o time. Só depois expanda para o conjunto completo de <code>public/</code>. É mais fácil revisar texto curto do que reescrever cinco páginas.</p>
+      </div>
+    </article>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="container">
     <div class="footer-grid">
-      <div>
-        <p><strong>Jatobá Lab</strong> — projeto pessoal de Gabriel Jatobá. Brasil.</p>
-        <p>Privacidade e DPO: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></p>
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Jatobá Lab — início">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span class="brand-stack">
+            <span class="brand-name">Jatobá Lab</span>
+            <span class="brand-sub">Transparência &amp; LGPD</span>
+          </span>
+        </a>
+        <p>Projeto pessoal de Gabriel Jatobá. Brasil. Canal permanente de transparência sobre dados pessoais, termos de uso e governança de LGPD.</p>
       </div>
-      <nav aria-label="Navegação do rodapé">
+      <nav class="footer-col" aria-label="Documentos">
+        <p class="footer-label">Documentos</p>
         <ul>
           <li><a href="/privacidade">Privacidade</a></li>
-          <li><a href="/termos">Termos</a></li>
-          <li><a href="/lgpd">LGPD</a></li>
+          <li><a href="/termos">Termos de uso</a></li>
+          <li><a href="/lgpd">LGPD &amp; governança</a></li>
           <li><a href="/modelo">Modelo</a></li>
         </ul>
       </nav>
+      <div class="footer-col">
+        <p class="footer-label">Contato</p>
+        <ul>
+          <li><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></li>
+          <li><a href="/lgpd#dsar">Exercer direitos</a></li>
+          <li><a href="/lgpd#incidentes">Relatar incidente</a></li>
+          <li><a href="/.well-known/security.txt">Segurança</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="fine">Versão 1.0 · Última atualização: 3 de novembro de 2026. Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+    <div class="footer-bottom">
+      <p>© 2026 Jatobá Lab</p>
+      <p>Versão 1.0 · 3 de novembro de 2026</p>
+      <p>Conteúdo informativo; não constitui parecer jurídico.</p>
+    </div>
   </div>
 </footer>
 </body>

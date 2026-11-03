@@ -6,58 +6,92 @@
 <title>[CONTROLADOR] — Privacidade e Transparência</title>
 <meta name="description" content="Política de privacidade e transparência de [CONTROLADOR].">
 <link rel="canonical" href="https://[DOMÍNIO]/">
+<meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
 <style>
-/* Starter autocontido. Ao publicar com CSP restritiva, mova este bloco para styles.css. */
-:root{--bg:#fbfaf7;--surface:#fff;--ink:#171714;--muted:#55554c;--line:#dcd8cd;--accent:#175c46;--accent-soft:#e9f1ec;--warn:#6f4300;--warn-soft:#fdf3e1}
-@media (prefers-color-scheme:dark){:root{--bg:#12130f;--surface:#1a1b16;--ink:#eceade;--muted:#b3b1a3;--line:#33352c;--accent:#8fd0b4;--accent-soft:#1d2a24;--warn:#f0c17a;--warn-soft:#2a2213}}
+/* Starter autocontido. As fontes apontam para ../public/fonts:
+   ao copiar, leve a pasta fonts junto e ajuste os caminhos (ou remova os @font-face). */
+@font-face{font-family:"Geist";font-style:normal;font-weight:100 900;font-display:swap;src:url("../public/fonts/geist-sans-latin.woff2") format("woff2")}
+@font-face{font-family:"Geist";font-style:italic;font-weight:100 900;font-display:swap;src:url("../public/fonts/geist-sans-latin-italic.woff2") format("woff2")}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:100 900;font-display:swap;src:url("../public/fonts/geist-mono-latin.woff2") format("woff2")}
+:root{--background:#fafaf9;--foreground:#1c1917;--card:#fff;--muted:#f5f5f4;--muted-foreground:#57534e;--border:#e7e5e4;--border-strong:#d6d3d1;--primary:#14532d;--primary-foreground:#fafaf9;--primary-soft:#ecfdf3;--warning:#92400e;--warning-soft:#fffbeb;--warning-border:#fde68a;--radius:.875rem;--radius-sm:.5rem;--font-sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--font-mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root{--background:#0c0a09;--foreground:#f5f5f4;--card:#161412;--muted:#1c1917;--muted-foreground:#a8a29e;--border:#292524;--border-strong:#44403c;--primary:#86efac;--primary-foreground:#052e16;--primary-soft:#0f2319;--warning:#fcd34d;--warning-soft:#1c1508;--warning-border:#42300a}}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-.wrap{max-width:900px;margin:0 auto;padding:0 1.25rem}
-a{color:var(--accent);text-underline-offset:2px}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.banner{background:var(--warn-soft);color:var(--warn);border-bottom:1px solid var(--warn);padding:.7rem 0;font-size:.9rem;font-weight:600}
-header.site{border-bottom:1px solid var(--line);padding:1.1rem 0}
-.brand{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
-nav ul{display:flex;flex-wrap:wrap;gap:.2rem 1rem;list-style:none;margin:.75rem 0 0;padding:0;font-size:.92rem}
-nav a{color:var(--muted);text-decoration:none}
-nav a:hover{color:var(--ink)}
-main{padding:2.25rem 0 3rem}
-h1{font-size:clamp(1.9rem,4.6vw,2.5rem);line-height:1.2;margin:0 0 .75rem;letter-spacing:-.015em}
-h2{font-size:1.35rem;margin:2.5rem 0 .75rem;padding-top:1.25rem;border-top:1px solid var(--line);line-height:1.25}
-h3{font-size:1.05rem;margin:1.5rem 0 .4rem}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--background);color:var(--foreground);font:1rem/1.65 var(--font-sans);-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px}
+.container{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;background:var(--card);padding:.6rem .9rem;border:1px solid var(--border);border-radius:6px;z-index:10}
+.banner{background:var(--warning-soft);border-bottom:1px solid var(--warning-border);color:var(--warning);padding:.7rem 0;font-size:.8125rem;font-weight:500}
+.banner strong{font-weight:600}
+header.site{position:sticky;top:0;z-index:9;background:var(--background);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;gap:1rem;min-height:4rem;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:.6rem;color:var(--foreground);text-decoration:none;font-weight:600;letter-spacing:-.015em}
+.brand-mark{display:grid;place-items:center;width:1.75rem;height:1.75rem;border-radius:.375rem;background:var(--primary);color:var(--primary-foreground);font:600 .8rem var(--font-mono)}
+.brand-sub{display:block;font:400 .625rem var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted-foreground)}
+nav.site{margin-left:auto}
+nav.site ul{display:flex;gap:.15rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav.site a{display:inline-block;padding:.4rem .65rem;border-radius:.375rem;color:var(--muted-foreground);font-size:.875rem;text-decoration:none}
+nav.site a:hover{background:var(--muted);color:var(--foreground)}
+main{padding:3rem 0 4rem}
+.hero{padding-bottom:2.25rem}
+.eyebrow{font:500 .6875rem var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted-foreground);margin:0 0 .75rem}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.06;letter-spacing:-.035em;margin:0 0 1rem;text-wrap:balance}
+h2{font-size:1.4rem;letter-spacing:-.025em;margin:2.75rem 0 .75rem;padding-top:1.5rem;border-top:1px solid var(--border);text-wrap:balance}
+h3{font-size:1.05rem;margin:1.75rem 0 .5rem}
 p,ul,ol{margin:0 0 1rem}
-ul,ol{padding-left:1.3rem}
-li{margin-bottom:.35rem}
-.lead{font-size:1.15rem;color:var(--muted);max-width:62ch}
-.meta{font-size:.88rem;color:var(--muted)}
-.callout{border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;padding:1rem 1.15rem;margin:1.5rem 0}
-.callout.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+ul,ol{padding-left:1.25rem}
+li{margin:.35rem 0}
+.lead{font-size:1.125rem;color:var(--muted-foreground);max-width:40rem;margin:0 0 1.5rem}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.5rem}
+.badge{display:inline-flex;align-items:center;padding:.25rem .6rem;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--muted-foreground);font:500 .6875rem var(--font-mono);letter-spacing:.07em;text-transform:uppercase}
+.badge-accent{background:var(--primary-soft);border-color:var(--primary);color:var(--primary)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:0 1px 2px rgba(28,25,23,.04)}
+.card h3{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0}
+.callout{margin:1.5rem 0;padding:1.15rem 1.35rem;border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:var(--radius-sm);background:var(--primary-soft)}
+.callout.warn{border-color:var(--warning-border);border-left-color:var(--warning);background:var(--warning-soft)}
+.callout-title{display:block;margin-bottom:.3rem;font:600 .625rem var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+.callout.warn .callout-title{color:var(--warning)}
 .callout p:last-child{margin-bottom:0}
-.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:1.25rem 0;background:var(--surface)}
-table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px}
-th,td{text-align:left;vertical-align:top;padding:.7rem .9rem;border-bottom:1px solid var(--line)}
-thead th{background:var(--accent-soft);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.table-scroll{overflow-x:auto;margin:1.5rem 0;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.9375rem;min-width:36rem}
+caption{caption-side:bottom;text-align:left;padding:.75rem 1rem;font-size:.75rem;color:var(--muted-foreground);border-top:1px solid var(--border)}
+th,td{text-align:left;vertical-align:top;padding:.8rem 1rem}
+thead th{background:var(--muted);color:var(--muted-foreground);font:500 .625rem var(--font-mono);letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid var(--border)}
+tbody th,tbody td{border-bottom:1px solid var(--border)}
 tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
 tbody th{font-weight:600;white-space:nowrap}
-footer{border-top:1px solid var(--line);padding:2rem 0;font-size:.88rem;color:var(--muted)}
-footer p{margin:0 0 .4rem}
-@media print{.banner,header.site,footer{display:none}body{background:#fff;color:#000}.table-scroll{overflow:visible}}
+td{color:var(--muted-foreground)}
+footer.site{border-top:1px solid var(--border);padding:2rem 0;font-size:.8125rem;color:var(--muted-foreground)}
+footer.site p{margin:0 0 .4rem}
+footer.site .fine{border-top:1px solid var(--border);margin-top:1.25rem;padding-top:1.25rem;font-size:.75rem}
+@media (max-width:640px){.header-inner{padding:.75rem 0}nav.site{order:3;width:100%;margin-left:0}main{padding:2rem 0 3rem}}
+@media print{.banner,header.site,footer.site{display:none}body{background:#fff;color:#000}.table-scroll{overflow:visible}}
 </style>
 </head>
 <body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <div class="banner" role="note">
-  Modelo — adapte e revise antes de publicar. Este texto não é parecer jurídico e contém marcadores como [CONTROLADOR].
+  <div class="container"><strong>Modelo</strong> — adapte e revise antes de publicar. Este texto não é parecer jurídico e contém marcadores como [CONTROLADOR].</div>
 </div>
 
 <header class="site">
-  <div class="wrap">
-    <a class="brand" href="/">[CONTROLADOR]</a>
-    <nav aria-label="Navegação principal">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">[C]</span>
+      <span>[CONTROLADOR]<span class="brand-sub">Transparência &amp; Privacidade</span></span>
+    </a>
+    <nav class="site" aria-label="Navegação principal">
       <ul>
         <li><a href="#controlador">Privacidade</a></li>
         <li><a href="#dados">Dados</a></li>
-        <li><a href="#direitos">Seus direitos</a></li>
+        <li><a href="#direitos">Direitos</a></li>
         <li><a href="#ia">IA</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -65,31 +99,41 @@ footer p{margin:0 0 .4rem}
   </div>
 </header>
 
-<main>
-  <div class="wrap">
+<main id="conteudo">
+  <div class="container">
 
-    <h1>Privacidade e transparência</h1>
-    <p class="lead">Esta página explica como [CONTROLADOR] trata dados pessoais: o que coleta, por quê, com quem compartilha, por quanto tempo guarda e como você pode exercer seus direitos.</p>
-    <p class="meta">Versão [VERSÃO] · Última atualização: [DATA]</p>
-
-    <div class="callout warn">
-      <strong>Antes de publicar:</strong> substitua todos os marcadores entre colchetes, apague as seções que não se aplicam e revise o texto com apoio jurídico. Modelo informativo, sem garantia de adequação ao seu caso.
+    <div class="hero">
+      <p class="eyebrow">Documento público · [VERSÃO]</p>
+      <h1>Privacidade e transparência</h1>
+      <p class="lead">Esta página explica como [CONTROLADOR] trata dados pessoais: o que coleta, por quê, com quem compartilha, por quanto tempo guarda e como você pode exercer seus direitos.</p>
+      <div class="badges">
+        <span class="badge badge-accent">LGPD</span>
+        <span class="badge">DPO [DPO]</span>
+        <span class="badge">Atualizado em [DATA]</span>
+      </div>
+      <div class="callout warn">
+        <span class="callout-title">Antes de publicar</span>
+        <p>Substitua todos os marcadores entre colchetes, apague as seções que não se aplicam e revise o texto com apoio jurídico. Modelo informativo, sem garantia de adequação ao seu caso.</p>
+      </div>
     </div>
 
     <h2 id="controlador">Quem é o controlador</h2>
-    <ul>
-      <li><strong>Controlador:</strong> [CONTROLADOR]</li>
-      <li><strong>CNPJ / natureza:</strong> [CNPJ]</li>
-      <li><strong>Endereço:</strong> [ENDEREÇO]</li>
-      <li><strong>Encarregado (DPO):</strong> [DPO]</li>
-      <li><strong>Contato de privacidade:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></li>
-    </ul>
-    <p>O encarregado é o canal entre você, o controlador e a Autoridade Nacional de Proteção de Dados (ANPD), nos termos do art. 41 da LGPD.</p>
+    <div class="card">
+      <h3>Ficha do controlador</h3>
+      <ul>
+        <li><strong>Controlador:</strong> [CONTROLADOR]</li>
+        <li><strong>CNPJ / natureza:</strong> [CNPJ]</li>
+        <li><strong>Endereço:</strong> [ENDEREÇO]</li>
+        <li><strong>Encarregado (DPO):</strong> [DPO]</li>
+        <li><strong>Contato de privacidade:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+      </ul>
+      <p>O encarregado é o canal entre você, o controlador e a Autoridade Nacional de Proteção de Dados (ANPD), nos termos do art. 41 da LGPD.</p>
+    </div>
 
     <h2 id="dados">Quais dados tratamos</h2>
+    <p>Substitua a tabela por um inventário real. Não descreva coleta que não existe.</p>
     <div class="table-scroll">
       <table>
-        <caption>Substitua por um inventário real. Não descreva coleta que não existe.</caption>
         <thead>
           <tr><th scope="col">Categoria</th><th scope="col">Exemplos</th><th scope="col">Origem</th><th scope="col">Finalidade</th></tr>
         </thead>
@@ -173,24 +217,24 @@ footer p{margin:0 0 .4rem}
     <p>Esta página pode ser atualizada. A versão e a data ficam no topo; mudanças relevantes são destacadas por pelo menos 30 dias.</p>
 
     <h2 id="contato">Contato</h2>
+    <div class="callout">
+      <span class="callout-title">Checklist rápido</span>
+      <p>Troque os marcadores · confira bases legais · confira prazos de retenção · liste todos os fornecedores · ajuste a seção de IA · valide com apoio jurídico · publique e teste os links.</p>
+    </div>
     <ul>
       <li><strong>Encarregado:</strong> [DPO]</li>
       <li><strong>E-mail:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></li>
       <li><strong>Endereço:</strong> [ENDEREÇO]</li>
       <li><strong>ANPD:</strong> <a href="https://www.gov.br/anpd/" rel="noopener noreferrer">gov.br/anpd</a></li>
     </ul>
-
-    <div class="callout">
-      <strong>Checklist rápido:</strong> troque os marcadores · confira bases legais · confira prazos de retenção · liste todos os fornecedores · ajuste a seção de IA · valide com apoio jurídico · publique e teste os links.
-    </div>
   </div>
 </main>
 
-<footer>
-  <div class="wrap">
+<footer class="site">
+  <div class="container">
     <p><strong>[CONTROLADOR]</strong> — [ENDEREÇO]</p>
     <p>Privacidade: <a href="mailto:[EMAIL]">[EMAIL]</a></p>
-    <p>Versão [VERSÃO] · [DATA] · Modelo informativo; não constitui parecer jurídico.</p>
+    <p class="fine">Versão [VERSÃO] · [DATA] · Modelo informativo; não constitui parecer jurídico.</p>
   </div>
 </footer>
 </body>

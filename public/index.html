@@ -6,21 +6,27 @@
 <title>Jatobá Lab — Transparência e LGPD</title>
 <meta name="description" content="Canal oficial de transparência do Jatobá Lab: privacidade, termos de uso, governança de LGPD e um modelo aberto de página de transparência.">
 <link rel="canonical" href="https://lgpd.jatoba.tech/">
-<meta name="theme-color" content="#175c46">
+<meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatobá Lab — Transparência e LGPD">
 <meta property="og:description" content="Como o Jatobá Lab trata dados pessoais, o que esperar dos pilotos com IA e quais são as regras de uso.">
 <meta property="og:url" content="https://lgpd.jatoba.tech/">
+<link rel="preload" href="/fonts/geist-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">JL</span>
-      <span class="brand-text">Jatobá Lab<span class="brand-sub">Transparência &amp; LGPD</span></span>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Jatobá Lab — início">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-stack">
+        <span class="brand-name">Jatobá Lab</span>
+        <span class="brand-sub">Transparência &amp; LGPD</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Navegação principal">
       <ul>
@@ -31,156 +37,265 @@
         <li><a href="/modelo">Modelo</a></li>
       </ul>
     </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="mailto:gabrielvjatoba@gmail.com">Falar com o DPO</a>
   </div>
 </header>
 
 <main id="conteudo">
-  <div class="wrap">
-    <p class="eyebrow">Página oficial</p>
-    <h1>Transparência e privacidade no Jatobá Lab</h1>
-    <p class="lead">Aqui estão, sem letras miúdas escondidas, as regras sobre dados pessoais, os termos de uso e o estágio real do projeto. O Jatobá Lab é um laboratório pessoal em formação: parte do que está descrito aqui já funciona, parte ainda está em construção — e este site diz qual é qual.</p>
-    <p class="meta">Versão <strong>1.0</strong> · Última atualização: <strong>3 de novembro de 2026</strong></p>
+  <div class="container">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Página oficial · v1.0</p>
+        <h1 id="hero-title">Transparência e privacidade <span class="h1-sub">no Jatobá Lab</span></h1>
+        <p class="lead">Aqui estão, sem letras miúdas escondidas, as regras sobre dados pessoais, os termos de uso e o estágio real do projeto. O Jatobá Lab é um laboratório pessoal em formação: parte do que está descrito aqui já funciona, parte ainda está em construção — e este site diz qual é qual.</p>
+        <div class="badge-row">
+          <span class="badge badge-accent">LGPD</span>
+          <span class="badge">DPO ativo</span>
+          <span class="badge">Sem cookies</span>
+          <span class="badge">Lab em formação</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/privacidade">Ler a política</a>
+          <a class="btn btn-outline" href="/lgpd">Ver governança</a>
+        </div>
+        <p class="meta-line">Versão 1.0 · Atualizado em 3 de novembro de 2026</p>
+      </div>
+
+      <aside class="card ficha" aria-labelledby="ficha-title">
+        <h2 class="ficha-title" id="ficha-title">Ficha do projeto</h2>
+        <dl>
+          <div class="row">
+            <dt>Controlador</dt>
+            <dd>Gabriel Jatobá — Jatobá Lab (pessoa física, projeto pessoal), Brasil</dd>
+          </div>
+          <div class="row">
+            <dt>Encarregado</dt>
+            <dd>Gabriel Jatobá (DPO)</dd>
+          </div>
+          <div class="row">
+            <dt>Contato</dt>
+            <dd><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
+          </div>
+          <div class="row">
+            <dt>Status</dt>
+            <dd>Laboratório em formação — não é sociedade empresária constituída, não possui CNPJ próprio e não está certificado por nenhum órgão.</dd>
+          </div>
+          <div class="row">
+            <dt>Infra</dt>
+            <dd>Leaseweb (EUA) e Cloudflare</dd>
+          </div>
+          <div class="row">
+            <dt>IA</dt>
+            <dd>OpenRouter com ZDR exigido; Langfuse auto-hospedado</dd>
+          </div>
+        </dl>
+        <div class="ficha-foot">
+          <a href="/privacidade">Política completa →</a>
+        </div>
+      </aside>
+    </section>
 
     <div class="callout warn">
       <span class="callout-title">Aviso importante</span>
       <p>Este site é informativo e <strong>não constitui parecer jurídico</strong>. Ele descreve práticas reais e intenções declaradas do projeto, mas não substitui a análise de um advogado ou de um encarregado de dados habilitado para o seu caso. Onde uma informação jurídica ainda não existe — como CNPJ, contratos de operador ou pareceres — o site usa marcadores explícitos em vez de inventar dados.</p>
     </div>
 
-    <h2 id="quem-somos">O que é o Jatobá Lab</h2>
-    <p>O Jatobá Lab é um projeto pessoal de <strong>Gabriel Jatobá</strong>, sediado no Brasil, dedicado a experimentar produtos digitais e fluxos de trabalho com agentes de inteligência artificial. O laboratório pode evoluir para um produto comercial, virar uma pessoa jurídica e atender clientes. Enquanto isso não acontece, ele é operado como pessoa física e trata apenas os dados necessários para manter o site, responder contatos e conduzir pilotos experimentais.</p>
-    <p>Este domínio é o canal permanente de transparência do projeto. Se algo mudar na forma de tratar dados, a alteração será registrada aqui com data e versão.</p>
+    <section class="section" aria-labelledby="quem-somos">
+      <div class="section-head">
+        <p class="eyebrow">Contexto</p>
+        <h2 id="quem-somos">O que é o Jatobá Lab</h2>
+      </div>
+      <p>O Jatobá Lab é um projeto pessoal de <strong>Gabriel Jatobá</strong>, sediado no Brasil, dedicado a experimentar produtos digitais e fluxos de trabalho com agentes de inteligência artificial. O laboratório pode evoluir para um produto comercial, virar uma pessoa jurídica e atender clientes. Enquanto isso não acontece, ele é operado como pessoa física e trata apenas os dados necessários para manter o site, responder contatos e conduzir pilotos experimentais.</p>
+      <p>Este domínio é o canal permanente de transparência do projeto. Se algo mudar na forma de tratar dados, a alteração será registrada aqui com data e versão.</p>
+    </section>
 
-    <h2 id="resumo">Resumo do controlador e dos contatos</h2>
-    <dl class="deflist">
-      <dt>Controlador</dt>
-      <dd>Gabriel Jatobá — Jatobá Lab (pessoa física, projeto pessoal), Brasil</dd>
+    <section class="section" aria-labelledby="documentos">
+      <div class="section-head">
+        <p class="eyebrow">Documentos</p>
+        <h2 id="documentos">Tudo o que importa, em quatro documentos</h2>
+        <p>Sem juridiquês desnecessário e sem promessa que não possa ser checada. Cada documento explica o que faz, o que não faz e o que ainda depende de decisão.</p>
+      </div>
+      <div class="cards-grid">
+        <a class="card card-link" href="/privacidade">
+          <span class="card-kicker">Documento 01</span>
+          <h3>Política de Privacidade</h3>
+          <p>Quais dados são tratados, por quê, com quem são compartilhados, por quanto tempo ficam guardados e como exercer seus direitos.</p>
+          <span class="card-cta">Ler a política →</span>
+        </a>
+        <a class="card card-link" href="/termos">
+          <span class="card-kicker">Documento 02</span>
+          <h3>Termos de Uso</h3>
+          <p>Regras de aceitação, uso aceitável, limites de responsabilidade e o que esperar de um laboratório em formação.</p>
+          <span class="card-cta">Ler os termos →</span>
+        </a>
+        <a class="card card-link" href="/lgpd">
+          <span class="card-kicker">Documento 03</span>
+          <h3>LGPD &amp; Governança</h3>
+          <p>Papéis, resumo do ROPA por operação, RIPD, fluxo de solicitações, incidentes, suboperadores e transparência de IA.</p>
+          <span class="card-cta">Ver a governança →</span>
+        </a>
+        <a class="card card-link" href="/modelo">
+          <span class="card-kicker">Documento 04</span>
+          <h3>Modelo aberto</h3>
+          <p>Este repositório também é um modelo reutilizável de página de transparência. Veja o que trocar antes de publicar.</p>
+          <span class="card-cta">Usar como modelo →</span>
+        </a>
+      </div>
+    </section>
 
-      <dt>Encarregado (DPO)</dt>
-      <dd>Gabriel Jatobá</dd>
+    <section class="section split" aria-labelledby="escopo">
+      <div>
+        <p class="eyebrow">Escopo</p>
+        <h2 id="escopo">O que esta página cobre</h2>
+        <p>Esta é a página de transparência do <strong>Jatobá Lab como projeto pessoal</strong>. Ela cobre:</p>
+        <ul class="check-list">
+          <li>a navegação neste site e os registros técnicos gerados por ela;</li>
+          <li>mensagens enviadas aos canais de contato do projeto;</li>
+          <li>pilotos e protótipos experimentais conduzidos diretamente por Gabriel Jatobá;</li>
+          <li>o uso de modelos de IA por meio do gateway do laboratório.</li>
+        </ul>
+      </div>
+      <aside class="card" aria-labelledby="personas-title">
+        <span class="card-kicker">Limite de escopo</span>
+        <h3 id="personas-title">As personas não se misturam</h3>
+        <p>Quando o Jatobá Lab atuar <strong>em nome de um cliente</strong> — por exemplo, em projetos da Kactux ou da SASGP —, o controlador dos dados é o cliente definido no contrato, e valem as políticas e o acordo de tratamento de dados (DPA) daquele contrato. O que está aqui não se aplica automaticamente a um cliente, e vice-versa.</p>
+        <p><a href="/lgpd#papeis">Ver papéis e responsabilidades →</a></p>
+      </aside>
+    </section>
 
-      <dt>Contato de privacidade</dt>
-      <dd><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
+    <section class="section" aria-labelledby="compromissos">
+      <div class="section-head">
+        <p class="eyebrow">Compromissos</p>
+        <h2 id="compromissos">Verificáveis, não adjetivos</h2>
+        <p>Em vez de “seguro” e “confiável”, o projeto prefere compromissos que possam ser checados por qualquer pessoa.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="feature-index">01</span>
+          <h3>Sem rastreamento</h3>
+          <p>O site não usa cookies de análise, publicidade, pixels ou fingerprinting. Não inclui JavaScript próprio, JavaScript de terceiros nem fontes externas.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-index">02</span>
+          <h3>Coleta mínima</h3>
+          <p>Nenhum campo é pedido sem uma finalidade descrita na Política de Privacidade.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-index">03</span>
+          <h3>IA com retenção zero configurada</h3>
+          <p>O gateway é configurado para negar coleta e exigir ZDR. Isso não é uma garantia universal: provedores diferentes têm políticas diferentes, e a verificação é feita caso a caso.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-index">04</span>
+          <h3>Prazos de resposta</h3>
+          <p>Pedidos de titulares são respondidos em até 15 dias, como previsto no art. 19 da LGPD, salvo justificativa expressa.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-index">05</span>
+          <h3>Incidentes comunicados</h3>
+          <p>Incidentes com risco relevante são avaliados e comunicados à ANPD e aos titulares afetados, nos termos do art. 48 da LGPD.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-index">06</span>
+          <h3>Registro de mudanças</h3>
+          <p>Toda alteração relevante nesta página gera nova versão e nova data no topo.</p>
+        </div>
+      </div>
+    </section>
 
-      <dt>Status do projeto</dt>
-      <dd>Laboratório em formação — não é sociedade empresária constituída, não possui CNPJ próprio e não está certificado por nenhum órgão.</dd>
+    <section class="section" aria-labelledby="construcao">
+      <div class="section-head">
+        <p class="eyebrow">Transparência ativa</p>
+        <h2 id="construcao">O que ainda está em construção</h2>
+        <p>Transparência também é admitir o que falta. Itens abertos nesta versão 1.0:</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption>Itens abertos e impacto para titulares.</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Situação</th><th scope="col">Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">CNPJ e razão social</th>
+              <td><span class="pill open">pendente</span></td>
+              <td>O projeto é operado como pessoa física. Se virar pessoa jurídica, esta página será atualizada.</td>
+            </tr>
+            <tr>
+              <th scope="row">E-mail dedicado <code>lgpd@jatoba.tech</code></th>
+              <td><span class="pill open">pendente</span></td>
+              <td>Até o domínio de e-mail existir, o canal oficial é o Gmail indicado acima.</td>
+            </tr>
+            <tr>
+              <th scope="row">DPA com suboperadores</th>
+              <td><span class="pill open">em andamento</span></td>
+              <td>Os termos padrão dos provedores são usados como base; contratos específicos serão formalizados conforme o uso comercial avançar.</td>
+            </tr>
+            <tr>
+              <th scope="row">RIPD dos pilotos com IA</th>
+              <td><span class="pill open">em andamento</span></td>
+              <td>Pilotos que envolvam dados sensíveis ou decisões relevantes só começam após avaliação de impacto.</td>
+            </tr>
+            <tr>
+              <th scope="row">Registro completo de operações (ROPA)</th>
+              <td><span class="pill ok">interno</span></td>
+              <td>O resumo por operação está publicado; o registro completo é mantido internamente e disponibilizado quando cabível.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-      <dt>Hospedagem e CDN</dt>
-      <dd>Leaseweb (Estados Unidos) e Cloudflare</dd>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2 id="cta-title">Fale com o encarregado</h2>
+        <p>Para qualquer assunto de privacidade, dados pessoais, incidentes ou exercício de direitos. Descreva o pedido e, se possível, indique a página ou o serviço envolvido. Você receberá uma confirmação de recebimento.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a>
+    </section>
 
-      <dt>Gateway de modelos de IA</dt>
-      <dd>OpenRouter, configurado para negar coleta e exigir zero data retention (ZDR)</dd>
-
-      <dt>Observabilidade de IA</dt>
-      <dd>Langfuse auto-hospedado em infraestrutura do próprio projeto</dd>
-    </dl>
-
-    <h2 id="documentos">Documentos</h2>
-    <div class="grid">
-      <a class="card card-link" href="/privacidade">
-        <h3>Política de Privacidade</h3>
-        <p>Quais dados são tratados, por quê, com quem são compartilhados, por quanto tempo ficam guardados e como exercer seus direitos.</p>
-        <span class="more">Ler a política →</span>
-      </a>
-      <a class="card card-link" href="/termos">
-        <h3>Termos de Uso</h3>
-        <p>Regras de aceitação, uso aceitável, limites de responsabilidade e o que esperar de um laboratório em formação.</p>
-        <span class="more">Ler os termos →</span>
-      </a>
-      <a class="card card-link" href="/lgpd">
-        <h3>LGPD &amp; Governança</h3>
-        <p>Papéis, resumo do ROPA por operação, RIPD, fluxo de solicitações, incidentes, suboperadores e transparência de IA.</p>
-        <span class="more">Ver a governança →</span>
-      </a>
-      <a class="card card-link" href="/modelo">
-        <h3>Modelo aberto</h3>
-        <p>Este repositório também é um modelo reutilizável de página de transparência. Veja o que trocar antes de publicar.</p>
-        <span class="more">Usar como modelo →</span>
-      </a>
-    </div>
-
-    <h2 id="escopo">Escopo desta página</h2>
-    <p>Esta é a página de transparência do <strong>Jatobá Lab como projeto pessoal</strong>. Ela cobre:</p>
-    <ul>
-      <li>a navegação neste site e os registros técnicos gerados por ela;</li>
-      <li>mensagens enviadas aos canais de contato do projeto;</li>
-      <li>pilotos e protótipos experimentais conduzidos diretamente por Gabriel Jatobá;</li>
-      <li>o uso de modelos de IA por meio do gateway do laboratório.</li>
-    </ul>
-    <p>Quando o Jatobá Lab atuar <strong>em nome de um cliente</strong> — por exemplo, em projetos da Kactux ou da SASGP —, o controlador dos dados é o cliente definido no contrato, e valem as políticas e o acordo de tratamento de dados (DPA) daquele contrato. As personas não se misturam: o que está aqui não se aplica automaticamente a um cliente, e vice-versa.</p>
-
-    <h2 id="compromissos">Compromissos verificáveis</h2>
-    <p>Em vez de adjetivos, o projeto prefere compromissos que possam ser checados:</p>
-    <ul>
-      <li><strong>Sem rastreamento.</strong> O site não usa cookies de análise, publicidade, pixels ou fingerprinting. Não inclui JavaScript próprio, JavaScript de terceiros nem fontes externas.</li>
-      <li><strong>Coleta mínima.</strong> Nenhum campo é pedido sem uma finalidade descrita na Política de Privacidade.</li>
-      <li><strong>IA com retenção zero configurada.</strong> O gateway é configurado para negar coleta e exigir ZDR. Isso não é uma garantia universal: provedores diferentes têm políticas diferentes, e a verificação é feita caso a caso.</li>
-      <li><strong>Prazos de resposta.</strong> Pedidos de titulares são respondidos em até 15 dias, como previsto no art. 19 da LGPD, salvo justificativa expressa.</li>
-      <li><strong>Incidentes comunicados.</strong> Incidentes com risco relevante são avaliados e comunicados à ANPD e aos titulares afetados, nos termos do art. 48 da LGPD.</li>
-      <li><strong>Registro de mudanças.</strong> Toda alteração relevante nesta página gera nova versão e nova data no topo.</li>
-    </ul>
-
-    <h2 id="construcao">O que ainda está em construção</h2>
-    <p>Transparência também é admitir o que falta. Itens abertos nesta versão 1.0:</p>
-    <div class="table-scroll">
-      <table>
-        <caption>Itens abertos e impacto para titulares.</caption>
-        <thead>
-          <tr><th scope="col">Item</th><th scope="col">Situação</th><th scope="col">Impacto</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">CNPJ e razão social</th>
-            <td><span class="pill open">pendente</span></td>
-            <td>O projeto é operado como pessoa física. Se virar pessoa jurídica, esta página será atualizada.</td>
-          </tr>
-          <tr>
-            <th scope="row">E-mail dedicado <code>lgpd@jatoba.tech</code></th>
-            <td><span class="pill open">pendente</span></td>
-            <td>Até o domínio de e-mail existir, o canal oficial é o Gmail indicado acima.</td>
-          </tr>
-          <tr>
-            <th scope="row">DPA com suboperadores</th>
-            <td><span class="pill open">em andamento</span></td>
-            <td>Os termos padrão dos provedores são usados como base; contratos específicos serão formalizados conforme o uso comercial avançar.</td>
-          </tr>
-          <tr>
-            <th scope="row">RIPD dos pilotos com IA</th>
-            <td><span class="pill open">em andamento</span></td>
-            <td>Pilotos que envolvam dados sensíveis ou decisões relevantes só começam após avaliação de impacto.</td>
-          </tr>
-          <tr>
-            <th scope="row">Registro completo de operações (ROPA)</th>
-            <td><span class="pill ok">interno</span></td>
-            <td>O resumo por operação está publicado; o registro completo é mantido internamente e disponibilizado quando cabível.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout">
-      <span class="callout-title">Fale com o encarregado</span>
-      <p>Para qualquer assunto de privacidade, dados pessoais, incidentes ou exercício de direitos: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a>. Descreva o pedido e, se possível, indique a página ou o serviço envolvido. Você receberá uma confirmação de recebimento.</p>
-    </div>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="container">
     <div class="footer-grid">
-      <div>
-        <p><strong>Jatobá Lab</strong> — projeto pessoal de Gabriel Jatobá. Brasil.</p>
-        <p>Privacidade e DPO: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></p>
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Jatobá Lab — início">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span class="brand-stack">
+            <span class="brand-name">Jatobá Lab</span>
+            <span class="brand-sub">Transparência &amp; LGPD</span>
+          </span>
+        </a>
+        <p>Projeto pessoal de Gabriel Jatobá. Brasil. Canal permanente de transparência sobre dados pessoais, termos de uso e governança de LGPD.</p>
       </div>
-      <nav aria-label="Navegação do rodapé">
+      <nav class="footer-col" aria-label="Documentos">
+        <p class="footer-label">Documentos</p>
         <ul>
           <li><a href="/privacidade">Privacidade</a></li>
-          <li><a href="/termos">Termos</a></li>
-          <li><a href="/lgpd">LGPD</a></li>
+          <li><a href="/termos">Termos de uso</a></li>
+          <li><a href="/lgpd">LGPD &amp; governança</a></li>
           <li><a href="/modelo">Modelo</a></li>
         </ul>
       </nav>
+      <div class="footer-col">
+        <p class="footer-label">Contato</p>
+        <ul>
+          <li><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></li>
+          <li><a href="/lgpd#dsar">Exercer direitos</a></li>
+          <li><a href="/lgpd#incidentes">Relatar incidente</a></li>
+          <li><a href="/.well-known/security.txt">Segurança</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="fine">Versão 1.0 · Última atualização: 3 de novembro de 2026. Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+    <div class="footer-bottom">
+      <p>© 2026 Jatobá Lab</p>
+      <p>Versão 1.0 · 3 de novembro de 2026</p>
+      <p>Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+    </div>
   </div>
 </footer>
 </body>

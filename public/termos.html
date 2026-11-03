@@ -6,21 +6,27 @@
 <title>Termos de Uso — Jatobá Lab</title>
 <meta name="description" content="Termos de Uso do Jatobá Lab: aceitação, elegibilidade, uso aceitável, conteúdo do usuário, limites de IA, propriedade intelectual, disponibilidade, responsabilidade e foro.">
 <link rel="canonical" href="https://lgpd.jatoba.tech/termos">
-<meta name="theme-color" content="#175c46">
+<meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Termos de Uso — Jatobá Lab">
 <meta property="og:description" content="Regras de uso do site e dos pilotos experimentais do Jatobá Lab.">
 <meta property="og:url" content="https://lgpd.jatoba.tech/termos">
+<link rel="preload" href="/fonts/geist-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">JL</span>
-      <span class="brand-text">Jatobá Lab<span class="brand-sub">Transparência &amp; LGPD</span></span>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Jatobá Lab — início">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-stack">
+        <span class="brand-name">Jatobá Lab</span>
+        <span class="brand-sub">Transparência &amp; LGPD</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Navegação principal">
       <ul>
@@ -31,197 +37,226 @@
         <li><a href="/modelo">Modelo</a></li>
       </ul>
     </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="mailto:gabrielvjatoba@gmail.com">Falar com o DPO</a>
   </div>
 </header>
 
 <main id="conteudo">
-  <div class="wrap">
-    <p class="eyebrow">Documento legal</p>
-    <h1>Termos de Uso</h1>
-    <p class="lead">Estes termos definem as condições para acessar o site do Jatobá Lab e participar de seus pilotos experimentais. Eles existem para deixar claro o que você pode esperar — inclusive sobre o que ainda não está pronto.</p>
-    <p class="meta">Versão <strong>1.0</strong> · Vigente desde <strong>3 de novembro de 2026</strong> · Última atualização: <strong>3 de novembro de 2026</strong></p>
+  <div class="container doc-layout">
+    <aside class="doc-aside">
+      <nav class="toc" aria-labelledby="toc-title">
+            <p class="toc-title" id="toc-title">Nesta página</p>
+            <ol>
+              <li><a href="#aceitacao">Aceitação</a></li>
+              <li><a href="#elegibilidade">Elegibilidade</a></li>
+              <li><a href="#servico">O que o laboratório oferece</a></li>
+              <li><a href="#uso-aceitavel">Uso aceitável</a></li>
+              <li><a href="#proibidos">Usos proibidos</a></li>
+              <li><a href="#conteudo-usuario">Conteúdo do usuário</a></li>
+              <li><a href="#ia">Limitações de IA</a></li>
+              <li><a href="#pi">Propriedade intelectual</a></li>
+              <li><a href="#disponibilidade">Disponibilidade</a></li>
+              <li><a href="#terceiros">Terceiros</a></li>
+              <li><a href="#isencoes">Isenções</a></li>
+              <li><a href="#responsabilidade">Responsabilidade</a></li>
+              <li><a href="#privacidade">Privacidade</a></li>
+              <li><a href="#suspensao">Suspensão e encerramento</a></li>
+              <li><a href="#alteracoes">Alterações</a></li>
+              <li><a href="#foro">Legislação e foro</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ol>
+          </nav>
+    </aside>
 
-    <div class="callout warn">
-      <span class="callout-title">Leia antes de usar</span>
-      <p>Este é um laboratório em formação, não um serviço comercial maduro. Recursos podem mudar ou ser descontinuados sem aviso prévio. Nada aqui afasta direitos irrenunciáveis do consumidor nem constitui parecer jurídico.</p>
-    </div>
+    <article class="prose">
+      <header class="doc-head">
+        <p class="eyebrow">Documento legal</p>
+        <h1>Termos de Uso</h1>
+        <p class="lead">Estes termos definem as condições para acessar o site do Jatobá Lab e participar de seus pilotos experimentais. Eles existem para deixar claro o que você pode esperar — inclusive sobre o que ainda não está pronto.</p>
+        <div class="meta-row"><span class="badge badge-accent">Versão 1.0</span><span class="badge">Vigente desde 3 de novembro de 2026</span></div>
+      </header>
 
-    <nav class="toc" aria-labelledby="toc-title">
-      <p id="toc-title">Nesta página</p>
-      <ol>
-        <li><a href="#aceitacao">Aceitação</a></li>
-        <li><a href="#elegibilidade">Elegibilidade</a></li>
-        <li><a href="#servico">O que o laboratório oferece</a></li>
-        <li><a href="#uso-aceitavel">Uso aceitável</a></li>
-        <li><a href="#proibidos">Usos proibidos</a></li>
-        <li><a href="#conteudo">Conteúdo do usuário</a></li>
-        <li><a href="#ia">Limitações de IA</a></li>
-        <li><a href="#pi">Propriedade intelectual</a></li>
-        <li><a href="#disponibilidade">Disponibilidade</a></li>
-        <li><a href="#terceiros">Terceiros</a></li>
-        <li><a href="#isencoes">Isenções</a></li>
-        <li><a href="#responsabilidade">Responsabilidade</a></li>
-        <li><a href="#privacidade">Privacidade</a></li>
-        <li><a href="#suspensao">Suspensão e encerramento</a></li>
-        <li><a href="#alteracoes">Alterações</a></li>
-        <li><a href="#foro">Legislação e foro</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ol>
-    </nav>
+      <div class="callout warn">
+        <span class="callout-title">Leia antes de usar</span>
+        <p>Este é um laboratório em formação, não um serviço comercial maduro. Recursos podem mudar ou ser descontinuados sem aviso prévio. Nada aqui afasta direitos irrenunciáveis do consumidor nem constitui parecer jurídico.</p>
+      </div>
 
-    <h2 id="aceitacao">1. Aceitação</h2>
-    <p>Ao acessar este site, enviar uma mensagem ou participar de um piloto, você declara que leu e concorda com estes Termos de Uso e com a <a href="/privacidade">Política de Privacidade</a>. Se não concordar, não utilize o site nem os pilotos.</p>
-    <p>Quando um piloto tiver termo próprio, ele prevalece sobre estes termos apenas no que for específico daquele piloto. Em caso de conflito, a ordem é: (1) termo do piloto; (2) estes Termos; (3) Política de Privacidade.</p>
+    
 
-    <h2 id="elegibilidade">2. Elegibilidade</h2>
-    <p>Você deve ter pelo menos 18 anos e capacidade civil para aceitar estes termos. Menores de 18 anos só podem participar com autorização e acompanhamento de responsável legal, quando o piloto permitir expressamente.</p>
-    <p>Se você usa o site em nome de uma empresa ou instituição, declara ter poderes para vinculá-la a estes termos.</p>
-    <p>Não é permitido usar o serviço se você estiver impedido por lei aplicável, incluindo sanções nacionais ou internacionais.</p>
+      <h2 id="aceitacao">Aceitação</h2>
+      <p>Ao acessar este site, enviar uma mensagem ou participar de um piloto, você declara que leu e concorda com estes Termos de Uso e com a <a href="/privacidade">Política de Privacidade</a>. Se não concordar, não utilize o site nem os pilotos.</p>
+      <p>Quando um piloto tiver termo próprio, ele prevalece sobre estes termos apenas no que for específico daquele piloto. Em caso de conflito, a ordem é: (1) termo do piloto; (2) estes Termos; (3) Política de Privacidade.</p>
 
-    <h2 id="servico">3. O que o laboratório oferece</h2>
-    <p>O Jatobá Lab é um projeto pessoal de pesquisa e experimentação. Nesta versão, ele oferece:</p>
-    <ul>
-      <li>conteúdo informativo sobre privacidade, LGPD e governança de dados;</li>
-      <li>um modelo aberto de página de transparência para outros projetos;</li>
-      <li>pilotos e protótipos experimentais, quando expressamente combinados;</li>
-      <li>canais de contato para dúvidas, solicitações e relatos de segurança.</li>
-    </ul>
-    <p>O laboratório <strong>não</strong> é: escritório de advocacia, consultoria de compliance certificada, prestador de serviço regulado, instituição financeira ou órgão público. O conteúdo publicado tem caráter informativo.</p>
-    <p>Recursos podem ser adicionados, alterados ou removidos a qualquer momento, especialmente durante experimentos.</p>
+      <h2 id="elegibilidade">Elegibilidade</h2>
+      <p>Você deve ter pelo menos 18 anos e capacidade civil para aceitar estes termos. Menores de 18 anos só podem participar com autorização e acompanhamento de responsável legal, quando o piloto permitir expressamente.</p>
+      <p>Se você usa o site em nome de uma empresa ou instituição, declara ter poderes para vinculá-la a estes termos.</p>
+      <p>Não é permitido usar o serviço se você estiver impedido por lei aplicável, incluindo sanções nacionais ou internacionais.</p>
 
-    <h2 id="uso-aceitavel">4. Uso aceitável</h2>
-    <p>Você se compromete a usar o site e os pilotos de boa-fé, respeitando a lei, os direitos de terceiros e a integridade dos sistemas. Exemplos de uso aceitável:</p>
-    <ul>
-      <li>ler, citar e compartilhar o conteúdo, com atribuição quando cabível;</li>
-      <li>enviar mensagens com informações verdadeiras e pertinentes;</li>
-      <li>testar pilotos dentro do escopo combinado e relatar problemas;</li>
-      <li>exercer seus direitos de titular pelos canais indicados.</li>
-    </ul>
+      <h2 id="servico">O que o laboratório oferece</h2>
+      <p>O Jatobá Lab é um projeto pessoal de pesquisa e experimentação. Nesta versão, ele oferece:</p>
+      <ul>
+        <li>conteúdo informativo sobre privacidade, LGPD e governança de dados;</li>
+        <li>um modelo aberto de página de transparência para outros projetos;</li>
+        <li>pilotos e protótipos experimentais, quando expressamente combinados;</li>
+        <li>canais de contato para dúvidas, solicitações e relatos de segurança.</li>
+      </ul>
+      <p>O laboratório <strong>não</strong> é: escritório de advocacia, consultoria de compliance certificada, prestador de serviço regulado, instituição financeira ou órgão público. O conteúdo publicado tem caráter informativo.</p>
+      <p>Recursos podem ser adicionados, alterados ou removidos a qualquer momento, especialmente durante experimentos.</p>
 
-    <h2 id="proibidos">5. Usos proibidos</h2>
-    <p>É vedado, entre outras condutas:</p>
-    <ul>
-      <li>usar o site para fins ilícitos, fraudulentos ou que violem direitos de terceiros;</li>
-      <li>enviar conteúdo ilícito, difamatório, discriminatório, violento ou que explore menores;</li>
-      <li>enviar dados pessoais de terceiros sem base legal ou autorização;</li>
-      <li>enviar dados sensíveis, credenciais, segredos comerciais ou documentos confidenciais sem acordo prévio;</li>
-      <li>tentar obter acesso não autorizado a sistemas, contas, chaves ou infraestrutura;</li>
-      <li>realizar varreduras automatizadas agressivas, ataques de negação de serviço ou exploração de vulnerabilidades sem autorização escrita;</li>
-      <li>contornar limites técnicos, de uso ou de segurança;</li>
-      <li>usar saídas de IA para tomar decisões de alto impacto sobre pessoas sem revisão humana;</li>
-      <li>reproduzir o conteúdo como se fosse oficial, certificado ou endossado pelo Jatobá Lab;</li>
-      <li>usar a marca “Jatobá Lab” de forma que sugira parceria, certificação ou endosso inexistente.</li>
-    </ul>
-    <p>Pesquisa de segurança é bem-vinda quando feita de boa-fé, sem afetar disponibilidade ou privacidade de terceiros e com relato responsável pelo canal indicado em <code>/.well-known/security.txt</code>.</p>
+      <h2 id="uso-aceitavel">Uso aceitável</h2>
+      <p>Você se compromete a usar o site e os pilotos de boa-fé, respeitando a lei, os direitos de terceiros e a integridade dos sistemas. Exemplos de uso aceitável:</p>
+      <ul>
+        <li>ler, citar e compartilhar o conteúdo, com atribuição quando cabível;</li>
+        <li>enviar mensagens com informações verdadeiras e pertinentes;</li>
+        <li>testar pilotos dentro do escopo combinado e relatar problemas;</li>
+        <li>exercer seus direitos de titular pelos canais indicados.</li>
+      </ul>
 
-    <h2 id="conteudo">6. Conteúdo do usuário</h2>
-    <p>Você mantém a titularidade do conteúdo que envia. Ao enviar conteúdo, concede ao laboratório uma licença limitada, não exclusiva e revogável para usá-lo apenas na finalidade para a qual foi enviado: responder sua mensagem, executar o piloto, corrigir falhas e manter registro.</p>
-    <p>Você declara que:</p>
-    <ul>
-      <li>tem direito de enviar o conteúdo;</li>
-      <li>o conteúdo não viola direitos de terceiros nem a lei;</li>
-      <li>quando envolver dados pessoais de terceiros, possui base legal para o compartilhamento.</li>
-    </ul>
-    <p>O laboratório pode remover conteúdo que viole estes termos ou a lei, com comunicação quando possível.</p>
+      <h2 id="proibidos">Usos proibidos</h2>
+      <p>É vedado, entre outras condutas:</p>
+      <ul>
+        <li>usar o site para fins ilícitos, fraudulentos ou que violem direitos de terceiros;</li>
+        <li>enviar conteúdo ilícito, difamatório, discriminatório, violento ou que explore menores;</li>
+        <li>enviar dados pessoais de terceiros sem base legal ou autorização;</li>
+        <li>enviar dados sensíveis, credenciais, segredos comerciais ou documentos confidenciais sem acordo prévio;</li>
+        <li>tentar obter acesso não autorizado a sistemas, contas, chaves ou infraestrutura;</li>
+        <li>realizar varreduras automatizadas agressivas, ataques de negação de serviço ou exploração de vulnerabilidades sem autorização escrita;</li>
+        <li>contornar limites técnicos, de uso ou de segurança;</li>
+        <li>usar saídas de IA para tomar decisões de alto impacto sobre pessoas sem revisão humana;</li>
+        <li>reproduzir o conteúdo como se fosse oficial, certificado ou endossado pelo Jatobá Lab;</li>
+        <li>usar a marca “Jatobá Lab” de forma que sugira parceria, certificação ou endosso inexistente.</li>
+      </ul>
+      <p>Pesquisa de segurança é bem-vinda quando feita de boa-fé, sem afetar disponibilidade ou privacidade de terceiros e com relato responsável pelo canal indicado em <code>/.well-known/security.txt</code>.</p>
 
-    <h2 id="ia">7. Limitações de inteligência artificial</h2>
-    <p>Recursos de IA são experimentais e têm limitações relevantes:</p>
-    <ul>
-      <li><strong>Podem errar.</strong> Modelos de linguagem podem produzir informações falsas, desatualizadas, incompletas ou incoerentes, mesmo com aparência de segurança.</li>
-      <li><strong>Não são aconselhamento profissional.</strong> Saídas não constituem orientação jurídica, médica, financeira, contábil ou de segurança.</li>
-      <li><strong>Exigem revisão humana.</strong> Use saídas como rascunho ou apoio, nunca como decisão final em temas sensíveis.</li>
-      <li><strong>Não são determinísticas.</strong> A mesma entrada pode gerar respostas diferentes.</li>
-      <li><strong>Dependem de terceiros.</strong> Disponibilidade, qualidade e preço podem mudar conforme o provedor do modelo.</li>
-      <li><strong>Não garantem originalidade.</strong> Pode haver semelhança com conteúdo de terceiros; a verificação de direitos é sua responsabilidade.</li>
-    </ul>
-    <p>Você é responsável pelo uso que faz das saídas e por verificar fatos, números, citações e obrigações antes de aplicá-las.</p>
+      <h2 id="conteudo-usuario">Conteúdo do usuário</h2>
+      <p>Você mantém a titularidade do conteúdo que envia. Ao enviar conteúdo, concede ao laboratório uma licença limitada, não exclusiva e revogável para usá-lo apenas na finalidade para a qual foi enviado: responder sua mensagem, executar o piloto, corrigir falhas e manter registro.</p>
+      <p>Você declara que:</p>
+      <ul>
+        <li>tem direito de enviar o conteúdo;</li>
+        <li>o conteúdo não viola direitos de terceiros nem a lei;</li>
+        <li>quando envolver dados pessoais de terceiros, possui base legal para o compartilhamento.</li>
+      </ul>
+      <p>O laboratório pode remover conteúdo que viole estes termos ou a lei, com comunicação quando possível.</p>
 
-    <h2 id="pi">8. Propriedade intelectual</h2>
-    <p>O conteúdo original deste site — textos, estrutura, identidade visual e código — pertence a Gabriel Jatobá / Jatobá Lab, salvo indicação em contrário. Marcas de terceiros pertencem a seus titulares.</p>
-    <p>O código do repositório é disponibilizado sob a licença indicada no arquivo <code>LICENSE</code>. A licença permite reutilização nos termos nela descritos, mas não autoriza usar a marca, a identidade visual ou o nome “Jatobá Lab” para sugerir endosso.</p>
-    <p>Citações são permitidas com atribuição e link para a fonte. Reprodução integral para fins comerciais exige autorização.</p>
+      <h2 id="ia">Limitações de inteligência artificial</h2>
+      <p>Recursos de IA são experimentais e têm limitações relevantes:</p>
+      <ul>
+        <li><strong>Podem errar.</strong> Modelos de linguagem podem produzir informações falsas, desatualizadas, incompletas ou incoerentes, mesmo com aparência de segurança.</li>
+        <li><strong>Não são aconselhamento profissional.</strong> Saídas não constituem orientação jurídica, médica, financeira, contábil ou de segurança.</li>
+        <li><strong>Exigem revisão humana.</strong> Use saídas como rascunho ou apoio, nunca como decisão final em temas sensíveis.</li>
+        <li><strong>Não são determinísticas.</strong> A mesma entrada pode gerar respostas diferentes.</li>
+        <li><strong>Dependem de terceiros.</strong> Disponibilidade, qualidade e preço podem mudar conforme o provedor do modelo.</li>
+        <li><strong>Não garantem originalidade.</strong> Pode haver semelhança com conteúdo de terceiros; a verificação de direitos é sua responsabilidade.</li>
+      </ul>
+      <p>Você é responsável pelo uso que faz das saídas e por verificar fatos, números, citações e obrigações antes de aplicá-las.</p>
 
-    <h2 id="disponibilidade">9. Disponibilidade e alterações do serviço</h2>
-    <p>O site é estático e busca alta disponibilidade, mas não há SLA, garantia de uptime ou suporte 24/7. Manutenções, falhas de fornecedores e mudanças de infraestrutura podem causar indisponibilidade.</p>
-    <p>O laboratório pode encerrar um piloto a qualquer momento, com aviso razoável quando possível. Se houver dados seus no piloto, você será informado sobre exportação e eliminação.</p>
+      <h2 id="pi">Propriedade intelectual</h2>
+      <p>O conteúdo original deste site — textos, estrutura, identidade visual e código — pertence a Gabriel Jatobá / Jatobá Lab, salvo indicação em contrário. Marcas de terceiros pertencem a seus titulares.</p>
+      <p>O código do repositório é disponibilizado sob a licença indicada no arquivo <code>LICENSE</code>. A licença permite reutilização nos termos nela descritos, mas não autoriza usar a marca, a identidade visual ou o nome “Jatobá Lab” para sugerir endosso.</p>
+      <p>Citações são permitidas com atribuição e link para a fonte. Reprodução integral para fins comerciais exige autorização.</p>
 
-    <h2 id="terceiros">10. Links e serviços de terceiros</h2>
-    <p>O site pode linkar para páginas de terceiros, como a ANPD ou documentação de fornecedores. Esses links não implicam endosso, e o laboratório não controla o conteúdo, as práticas de privacidade ou a disponibilidade deles.</p>
-    <p>Quando você usa um serviço de terceiro a partir de um piloto, os termos e a política desse terceiro também se aplicam.</p>
+      <h2 id="disponibilidade">Disponibilidade e alterações do serviço</h2>
+      <p>O site é estático e busca alta disponibilidade, mas não há SLA, garantia de uptime ou suporte 24/7. Manutenções, falhas de fornecedores e mudanças de infraestrutura podem causar indisponibilidade.</p>
+      <p>O laboratório pode encerrar um piloto a qualquer momento, com aviso razoável quando possível. Se houver dados seus no piloto, você será informado sobre exportação e eliminação.</p>
 
-    <h2 id="isencoes">11. Isenções</h2>
-    <p>Na máxima extensão permitida pela lei, e sem afastar direitos irrenunciáveis:</p>
-    <ul>
-      <li>o conteúdo informativo é fornecido “como está”, sem garantia de adequação a um caso concreto;</li>
-      <li>não há garantia de que o site ficará livre de erros, interrupções ou vulnerabilidades;</li>
-      <li>não há garantia de resultado, economia, conformidade ou aprovação regulatória decorrente do uso do conteúdo;</li>
-      <li>pilotos experimentais podem apresentar falhas e mudanças de comportamento.</li>
-    </ul>
-    <p>O laboratório não se responsabiliza por decisões tomadas exclusivamente com base em conteúdo informativo ou em saídas de IA sem a devida verificação.</p>
+      <h2 id="terceiros">Links e serviços de terceiros</h2>
+      <p>O site pode linkar para páginas de terceiros, como a ANPD ou documentação de fornecedores. Esses links não implicam endosso, e o laboratório não controla o conteúdo, as práticas de privacidade ou a disponibilidade deles.</p>
+      <p>Quando você usa um serviço de terceiro a partir de um piloto, os termos e a política desse terceiro também se aplicam.</p>
 
-    <h2 id="responsabilidade">12. Responsabilidade</h2>
-    <p>O laboratório responde por danos diretos que causar por dolo ou culpa, na medida da sua participação, observada a legislação aplicável. Não há limitação de responsabilidade para dolo, culpa grave, danos à vida ou à saúde, nem para direitos do consumidor que não possam ser afastados.</p>
-    <p>Fora dessas hipóteses, e quando admissível:</p>
-    <ul>
-      <li>não há responsabilidade por danos indiretos, lucros cessantes, perda de oportunidade ou perda de dados decorrente de uso indevido;</li>
-      <li>a responsabilidade total fica limitada ao valor efetivamente pago pelo uso do recurso nos 12 meses anteriores, ou a zero quando o recurso for gratuito;</li>
-      <li>você assume a responsabilidade por conteúdo que enviar e pelo uso que fizer das saídas.</li>
-    </ul>
-    <p>Se qualquer cláusula for considerada inválida, as demais permanecem em vigor.</p>
+      <h2 id="isencoes">Isenções</h2>
+      <p>Na máxima extensão permitida pela lei, e sem afastar direitos irrenunciáveis:</p>
+      <ul>
+        <li>o conteúdo informativo é fornecido “como está”, sem garantia de adequação a um caso concreto;</li>
+        <li>não há garantia de que o site ficará livre de erros, interrupções ou vulnerabilidades;</li>
+        <li>não há garantia de resultado, economia, conformidade ou aprovação regulatória decorrente do uso do conteúdo;</li>
+        <li>pilotos experimentais podem apresentar falhas e mudanças de comportamento.</li>
+      </ul>
+      <p>O laboratório não se responsabiliza por decisões tomadas exclusivamente com base em conteúdo informativo ou em saídas de IA sem a devida verificação.</p>
 
-    <h2 id="privacidade">13. Privacidade</h2>
-    <p>O tratamento de dados pessoais é descrito na <a href="/privacidade">Política de Privacidade</a>, que integra estes termos. Em resumo: coleta mínima, sem rastreamento publicitário, uso de IA com retenção zero configurada e direitos exercíveis em até 15 dias.</p>
+      <h2 id="responsabilidade">Responsabilidade</h2>
+      <p>O laboratório responde por danos diretos que causar por dolo ou culpa, na medida da sua participação, observada a legislação aplicável. Não há limitação de responsabilidade para dolo, culpa grave, danos à vida ou à saúde, nem para direitos do consumidor que não possam ser afastados.</p>
+      <p>Fora dessas hipóteses, e quando admissível:</p>
+      <ul>
+        <li>não há responsabilidade por danos indiretos, lucros cessantes, perda de oportunidade ou perda de dados decorrente de uso indevido;</li>
+        <li>a responsabilidade total fica limitada ao valor efetivamente pago pelo uso do recurso nos 12 meses anteriores, ou a zero quando o recurso for gratuito;</li>
+        <li>você assume a responsabilidade por conteúdo que enviar e pelo uso que fizer das saídas.</li>
+      </ul>
+      <p>Se qualquer cláusula for considerada inválida, as demais permanecem em vigor.</p>
 
-    <h2 id="suspensao">14. Suspensão e encerramento</h2>
-    <p>O acesso pode ser suspenso ou encerrado, com aviso quando possível, em caso de violação destes termos, risco à segurança, determinação legal ou uso abusivo. Você pode encerrar sua participação a qualquer momento, pedindo a eliminação dos seus dados, ressalvadas as hipóteses legais de conservação.</p>
+      <h2 id="privacidade">Privacidade</h2>
+      <p>O tratamento de dados pessoais é descrito na <a href="/privacidade">Política de Privacidade</a>, que integra estes termos. Em resumo: coleta mínima, sem rastreamento publicitário, uso de IA com retenção zero configurada e direitos exercíveis em até 15 dias.</p>
 
-    <h2 id="alteracoes">15. Alterações destes termos</h2>
-    <p>Estes termos podem ser atualizados para refletir mudanças no projeto ou na lei. A versão e a data ficam no topo. Mudanças relevantes são destacadas na página inicial por pelo menos 30 dias. O uso continuado após a vigência implica concordância com a nova versão.</p>
+      <h2 id="suspensao">Suspensão e encerramento</h2>
+      <p>O acesso pode ser suspenso ou encerrado, com aviso quando possível, em caso de violação destes termos, risco à segurança, determinação legal ou uso abusivo. Você pode encerrar sua participação a qualquer momento, pedindo a eliminação dos seus dados, ressalvadas as hipóteses legais de conservação.</p>
 
-    <h2 id="foro">16. Legislação e foro</h2>
-    <p>Estes termos são regidos pelas leis brasileiras, em especial pela Lei nº 13.709/2018 (LGPD), pelo Marco Civil da Internet (Lei nº 12.965/2014), pelo Código Civil e, quando aplicável, pelo Código de Defesa do Consumidor.</p>
-    <p>Fica eleito o foro da comarca do domicílio do usuário consumidor para dirimir controvérsias de consumo, nos termos do art. 101, I, do CDC. Nas demais relações, fica eleito o foro da comarca do domicílio do controlador, no Estado de Alagoas, Brasil, sem prejuízo de outros foros legalmente competentes.</p>
-    <p>Antes de qualquer medida judicial, as partes se comprometem a tentar solução amigável pelo canal de contato, pelo prazo de 30 dias.</p>
+      <h2 id="alteracoes">Alterações destes termos</h2>
+      <p>Estes termos podem ser atualizados para refletir mudanças no projeto ou na lei. A versão e a data ficam no topo. Mudanças relevantes são destacadas na página inicial por pelo menos 30 dias. O uso continuado após a vigência implica concordância com a nova versão.</p>
 
-    <h2 id="contato">17. Contato</h2>
-    <dl class="deflist">
-      <dt>Responsável</dt>
-      <dd>Gabriel Jatobá — Jatobá Lab</dd>
+      <h2 id="foro">Legislação e foro</h2>
+      <p>Estes termos são regidos pelas leis brasileiras, em especial pela Lei nº 13.709/2018 (LGPD), pelo Marco Civil da Internet (Lei nº 12.965/2014), pelo Código Civil e, quando aplicável, pelo Código de Defesa do Consumidor.</p>
+      <p>Fica eleito o foro da comarca do domicílio do usuário consumidor para dirimir controvérsias de consumo, nos termos do art. 101, I, do CDC. Nas demais relações, fica eleito o foro da comarca do domicílio do controlador, no Estado de Alagoas, Brasil, sem prejuízo de outros foros legalmente competentes.</p>
+      <p>Antes de qualquer medida judicial, as partes se comprometem a tentar solução amigável pelo canal de contato, pelo prazo de 30 dias.</p>
 
-      <dt>E-mail</dt>
-      <dd><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
+      <h2 id="contato">Contato</h2>
+      <dl class="deflist">
+        <dt>Responsável</dt>
+        <dd>Gabriel Jatobá — Jatobá Lab</dd>
 
-      <dt>Assunto sugerido</dt>
-      <dd>“Termos de Uso — [dúvida / solicitação / relato]”</dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
 
-      <dt>Segurança</dt>
-      <dd><a href="/.well-known/security.txt">security.txt</a> — relatos de vulnerabilidade</dd>
-    </dl>
+        <dt>Assunto sugerido</dt>
+        <dd>“Termos de Uso — [dúvida / solicitação / relato]”</dd>
 
-    <div class="callout">
-      <span class="callout-title">Versão 1.0</span>
-      <p>Estes termos acompanham a versão 1.0 do site e do projeto. Antes de uso comercial em escala, contratação de equipe ou oferta a consumidores em volume, recomenda-se revisão jurídica específica.</p>
-    </div>
+        <dt>Segurança</dt>
+        <dd><a href="/.well-known/security.txt">security.txt</a> — relatos de vulnerabilidade</dd>
+      </dl>
+
+      <div class="callout">
+        <span class="callout-title">Versão 1.0</span>
+        <p>Estes termos acompanham a versão 1.0 do site e do projeto. Antes de uso comercial em escala, contratação de equipe ou oferta a consumidores em volume, recomenda-se revisão jurídica específica.</p>
+      </div>
+    </article>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="container">
     <div class="footer-grid">
-      <div>
-        <p><strong>Jatobá Lab</strong> — projeto pessoal de Gabriel Jatobá. Brasil.</p>
-        <p>Privacidade e DPO: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></p>
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Jatobá Lab — início">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span class="brand-stack">
+            <span class="brand-name">Jatobá Lab</span>
+            <span class="brand-sub">Transparência &amp; LGPD</span>
+          </span>
+        </a>
+        <p>Projeto pessoal de Gabriel Jatobá. Brasil. Canal permanente de transparência sobre dados pessoais, termos de uso e governança de LGPD.</p>
       </div>
-      <nav aria-label="Navegação do rodapé">
+      <nav class="footer-col" aria-label="Documentos">
+        <p class="footer-label">Documentos</p>
         <ul>
           <li><a href="/privacidade">Privacidade</a></li>
-          <li><a href="/termos">Termos</a></li>
-          <li><a href="/lgpd">LGPD</a></li>
+          <li><a href="/termos">Termos de uso</a></li>
+          <li><a href="/lgpd">LGPD &amp; governança</a></li>
           <li><a href="/modelo">Modelo</a></li>
         </ul>
       </nav>
+      <div class="footer-col">
+        <p class="footer-label">Contato</p>
+        <ul>
+          <li><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></li>
+          <li><a href="/lgpd#dsar">Exercer direitos</a></li>
+          <li><a href="/lgpd#incidentes">Relatar incidente</a></li>
+          <li><a href="/.well-known/security.txt">Segurança</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="fine">Versão 1.0 · Última atualização: 3 de novembro de 2026. Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+    <div class="footer-bottom">
+      <p>© 2026 Jatobá Lab</p>
+      <p>Versão 1.0 · 3 de novembro de 2026</p>
+      <p>Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+    </div>
   </div>
 </footer>
 </body>

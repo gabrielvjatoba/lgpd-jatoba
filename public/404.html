@@ -6,17 +6,23 @@
 <title>Página não encontrada — Jatobá Lab</title>
 <meta name="description" content="A página procurada não existe ou foi movida.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#175c46">
+<meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="/fonts/geist-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">JL</span>
-      <span class="brand-text">Jatobá Lab<span class="brand-sub">Transparência &amp; LGPD</span></span>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Jatobá Lab — início">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-stack">
+        <span class="brand-name">Jatobá Lab</span>
+        <span class="brand-sub">Transparência &amp; LGPD</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Navegação principal">
       <ul>
@@ -27,39 +33,33 @@
         <li><a href="/modelo">Modelo</a></li>
       </ul>
     </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="mailto:gabrielvjatoba@gmail.com">Falar com o DPO</a>
   </div>
 </header>
 
 <main id="conteudo">
-  <div class="wrap">
-    <p class="eyebrow">Erro 404</p>
-    <h1>Esta página não existe</h1>
-    <p class="lead">O endereço pode estar errado, ou a página pode ter sido movida em uma atualização. Nada de preocupante: nenhum dado seu foi perdido por causa disso.</p>
-    <div class="grid">
-      <a class="card card-link" href="/">
-        <h3>Início</h3>
-        <p>Resumo do projeto, controlador, DPO e status.</p>
-        <span class="more">Ir para a home →</span>
-      </a>
-      <a class="card card-link" href="/privacidade">
-        <h3>Política de Privacidade</h3>
-        <p>Dados, finalidades, IA, retenção e direitos.</p>
-        <span class="more">Ler a política →</span>
-      </a>
-      <a class="card card-link" href="/lgpd">
-        <h3>LGPD &amp; Governança</h3>
-        <p>ROPA resumido, DSAR, incidentes e lacunas.</p>
-        <span class="more">Ver governança →</span>
-      </a>
+  <div class="container">
+    <div class="error-page">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1>Esta página não existe</h1>
+      <p>O endereço pode estar errado, ou a página pode ter sido movida em uma atualização. Nada de preocupante: nenhum dado seu foi perdido por causa disso.</p>
+      <div class="error-links">
+        <a class="btn btn-primary" href="/">Voltar ao início</a>
+        <a class="btn btn-outline" href="/privacidade">Ler a política</a>
+        <a class="btn btn-outline" href="/lgpd">Ver governança</a>
+      </div>
+      <p class="meta-line">Erro 404 · Jatobá Lab</p>
     </div>
-    <p>Se você chegou aqui por um link interno, avise o encarregado: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a>.</p>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <p><strong>Jatobá Lab</strong> — projeto pessoal de Gabriel Jatobá. Brasil.</p>
-    <p class="fine">Versão 1.0 · 3 de novembro de 2026. Conteúdo informativo; não constitui parecer jurídico.</p>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Jatobá Lab</p>
+      <p>Versão 1.0 · 3 de novembro de 2026</p>
+      <p>Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+    </div>
   </div>
 </footer>
 </body>

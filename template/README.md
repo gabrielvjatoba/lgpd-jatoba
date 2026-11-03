@@ -12,7 +12,7 @@ Starter de **uma página** em HTML e CSS puros, sem build, sem dependências e s
 4. Revise com apoio jurídico antes de uso comercial.
 5. Publique em qualquer host estático (Cloudflare Pages, GitHub Pages, Netlify, S3).
 
-O arquivo é autocontido: o CSS está em um bloco `<style>`. Se você for publicar com a CSP restritiva do conjunto completo (`public/_headers`, que usa `style-src 'self'`), mova o bloco para um arquivo `styles.css` e troque por `<link rel="stylesheet" href="/styles.css">`.
+O arquivo é autocontido: o CSS está em um bloco `<style>`. As fontes Geist são carregadas de `../public/fonts/` por caminho relativo (para pré-visualizar dentro do repositório). Ao copiar o template para outro projeto, leve a pasta `fonts/` junto e ajuste os caminhos — ou remova os `@font-face` para usar a fonte do sistema. Se você for publicar com a CSP restritiva do conjunto completo (`public/_headers`, que usa `style-src 'self'`), mova o bloco para um arquivo `styles.css` e troque por `<link rel="stylesheet" href="/styles.css">`.
 
 ## Marcadores
 
@@ -58,6 +58,7 @@ O arquivo é autocontido: o CSS está em um bloco `<style>`. Se você for public
 - [ ] `lang="pt-BR"` está correto (ajuste se o idioma mudar).
 - [ ] `title` e `meta description` foram personalizados.
 - [ ] `canonical` aponta para o domínio certo.
+- [ ] As fontes Geist foram copiadas (`fonts/`) e os caminhos dos `@font-face` conferem.
 - [ ] Se publicar com CSP: `style-src` permite o CSS e `script-src 'none'` não quebra nada.
 
 ### Publicação

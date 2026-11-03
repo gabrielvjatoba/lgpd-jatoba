@@ -8,9 +8,9 @@ Site oficial de transparência e LGPD do **Jatobá Lab** — projeto pessoal de 
 
 ## O que é
 
-Um site **estático puro**: HTML + CSS, sem React, sem build, sem bundler, sem backend, sem banco, sem JavaScript próprio, sem fontes externas, sem analytics e sem cookies de rastreamento.
+Um site **estático puro**: HTML + CSS, sem React, sem build, sem bundler, sem backend, sem banco, sem JavaScript próprio, sem fontes de CDN, sem analytics e sem cookies de rastreamento.
 
-Conteúdo essencial e verificável sobre privacidade, termos de uso e governança de LGPD — não uma peça de marketing.
+Conteúdo essencial e verificável sobre privacidade, termos de uso e governança de LGPD — não uma peça de marketing. A interface segue o vocabulário visual do shadcn/ui: tokens neutros, bordas de 1 px, cards, badges, dark mode automático e tipografia Geist auto-hospedada.
 
 ## Estrutura
 
@@ -21,7 +21,8 @@ public/
   termos.html                # termos de uso
   lgpd.html                  # governança: ROPA resumido, RIPD, DSAR, incidentes
   modelo.html                # explica o uso do repo como template
-  styles.css                 # CSS único (modo escuro automático, estilos de impressão)
+  styles.css                 # tokens + componentes (modo escuro automático, impressão)
+  fonts/                     # Geist Sans e Geist Mono em WOFF2 + OFL.txt
   404.html                   # página de erro
   robots.txt                 # indexação + sitemap
   sitemap.xml                # 5 URLs públicas
@@ -49,12 +50,13 @@ Abrir `index.html` direto no navegador também funciona, mas links absolutos (`/
 ## Editar
 
 1. **Textos jurídicos** — `public/privacidade.html`, `public/termos.html`, `public/lgpd.html`. Mantenha a versão e a data no topo sincronizadas nas três páginas e no rodapé.
-2. **Dados do controlador** — aparece na home (`dl.deflist`), na privacidade (seção 2) e no rodapé de todas as páginas.
+2. **Dados do controlador** — aparece na ficha da home (`public/index.html`), na privacidade (seção 2) e no rodapé de todas as páginas.
 3. **Fornecedores** — atualize em dois lugares: `public/privacidade.html` (seção 8) e `public/lgpd.html` (seção 7). As tabelas precisam contar a mesma história.
 4. **Retenção** — `public/privacidade.html` (seção 10) e `public/lgpd.html` (ROPA).
-5. **Estilo** — `public/styles.css`. Tudo usa variáveis CSS no `:root`; o modo escuro é automático via `prefers-color-scheme`.
-6. **Cabeçalhos** — `public/_headers`. Se adicionar JS ou estilo inline, a CSP atual (`script-src 'none'`, `style-src 'self'`) vai bloquear. Ajuste com consciência.
-7. **Domínio** — `robots.txt`, `sitemap.xml`, `security.txt` e a tag `canonical` das páginas.
+5. **Estilo** — `public/styles.css`. Tokens no `:root` (`--background`, `--foreground`, `--card`, `--muted`, `--border`, `--primary`, `--ring`, `--radius`); o dark mode é automático via `prefers-color-scheme`.
+6. **Tipografia** — `public/fonts/`. Geist Sans e Geist Mono em WOFF2, servidas localmente com `@font-face` e `font-display: swap`. Licença em `public/fonts/OFL.txt`.
+7. **Cabeçalhos** — `public/_headers`. Se adicionar JS ou estilo inline, a CSP atual (`script-src 'none'`, `style-src 'self'`) vai bloquear. Ajuste com consciência.
+8. **Domínio** — `robots.txt`, `sitemap.xml`, `security.txt` e a tag `canonical` das páginas.
 
 ## Publicar no Cloudflare Pages
 
