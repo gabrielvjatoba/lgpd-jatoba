@@ -2,8 +2,8 @@
 
 Site oficial de transparência e LGPD do **Jatobá Lab** — projeto pessoal de Gabriel Jatobá — e modelo reutilizável para outros projetos.
 
-- Produção: <https://lgpd.jatoba.tech> (custom domain)
-- Cloudflare Pages: <https://lgpd-jatoba.pages.dev>
+- Produção (enquanto o DNS não propaga): <https://lgpd-jatoba.pages.dev>
+- Domínio final: `lgpd.jatoba.tech` (anexado ao projeto, pendente de registro DNS na zona)
 - Template: [`template/`](template/) · Página explicativa: [`public/modelo.html`](public/modelo.html)
 
 ## O que é
@@ -68,17 +68,17 @@ Não há comando de build. O diretório de saída é `public/`.
 
 ### Domínio customizado `lgpd.jatoba.tech`
 
-O projeto foi publicado em `lgpd-jatoba.pages.dev`. O token usado no deploy **não tem acesso à zona `jatoba.tech`** (a zona está em outra conta Cloudflare), então o domínio não pôde ser anexado por API. Para concluir, no dashboard:
+O projeto foi publicado em `lgpd-jatoba.pages.dev`. O domínio `lgpd.jatoba.tech` **já está anexado ao projeto Pages**, mas ficou com status `pending` porque a zona `jatoba.tech` está em outra conta Cloudflare e o token atual não enxerga essa zona (`GET /zones?name=jatoba.tech` retorna lista vazia). Falta apenas criar o registro DNS na conta que detém a zona:
 
 1. Entre na conta Cloudflare que possui a zona `jatoba.tech`.
-2. Vá em **Workers & Pages → lgpd-jatoba → Custom domains**.
-3. Clique em **Set up a custom domain** e informe `lgpd.jatoba.tech`.
-4. Aceite a criação do registro. Se a zona estiver na mesma conta, a Cloudflare cria o CNAME automaticamente. Se estiver em outra conta, crie manualmente:
-   - Tipo: `CNAME`
+2. Vá em **DNS → Records → Add record**.
+3. Crie um `CNAME`:
    - Nome: `lgpd`
    - Destino: `lgpd-jatoba.pages.dev`
    - Proxy: ativado (nuvem laranja)
-5. Aguarde a validação do certificado (normalmente alguns minutos).
+4. Volte em **Workers & Pages → lgpd-jatoba → Custom domains** e confirme que `lgpd.jatoba.tech` aparece como ativo (a validação do certificado costuma levar alguns minutos).
+
+Se preferir refazer o vínculo pelo dashboard: **Workers & Pages → lgpd-jatoba → Custom domains → Set up a custom domain** → `lgpd.jatoba.tech`.
 
 Alternativa por API, com um token que tenha `Zone:DNS:Edit` e `Zone:Zone:Read` na zona `jatoba.tech`:
 
