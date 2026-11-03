@@ -1,0 +1,12 @@
+Contact: mailto:gabrielvjatoba@gmail.com
+Expires: 2027-11-02T23:59:59.000Z
+Preferred-Languages: pt-BR, en
+Canonical: https://lgpd.jatoba.tech/.well-known/security.txt
+Policy: https://lgpd.jatoba.tech/lgpd.html#incidentes
+Acknowledgments: https://lgpd.jatoba.tech/lgpd.html#contato
+
+# Relatos de vulnerabilidade são bem-vindos.
+# Escopo: site lgpd.jatoba.tech e infraestrutura do Jatobá Lab.
+# Não realize testes que afetem disponibilidade, terceiros ou dados reais.
+# Informe passos de reprodução, impacto e versão afetada.
+# Prazo de resposta inicial: até 5 dias úteis.

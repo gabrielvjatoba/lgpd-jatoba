@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LGPD &amp; Governança — Jatobá Lab</title>
+<meta name="description" content="Governança de LGPD do Jatobá Lab: papéis, resumo do ROPA por operação, RIPD, fluxo de solicitações de titulares, incidentes, suboperadores e transparência de IA.">
+<link rel="canonical" href="https://lgpd.jatoba.tech/lgpd.html">
+<meta name="theme-color" content="#175c46">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LGPD &amp; Governança — Jatobá Lab">
+<meta property="og:description" content="Como o Jatobá Lab organiza obrigações de LGPD, o que já existe e o que ainda falta.">
+<meta property="og:url" content="https://lgpd.jatoba.tech/lgpd.html">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">JL</span>
+      <span class="brand-text">Jatobá Lab<span class="brand-sub">Transparência &amp; LGPD</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/privacidade.html">Privacidade</a></li>
+        <li><a href="/termos.html">Termos</a></li>
+        <li><a href="/lgpd.html" aria-current="page">LGPD</a></li>
+        <li><a href="/modelo.html">Modelo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <div class="wrap">
+    <p class="eyebrow">Governança</p>
+    <h1>LGPD &amp; Governança de Dados</h1>
+    <p class="lead">Esta página mostra como o Jatobá Lab organiza suas obrigações de proteção de dados: quem responde por quê, quais operações existem, como pedidos são tratados e o que ainda falta. É um retrato honesto do estágio atual, não um selo de conformidade.</p>
+    <p class="meta">Versão <strong>1.0</strong> · Última atualização: <strong>3 de novembro de 2026</strong></p>
+
+    <div class="callout">
+      <span class="callout-title">Princípio editorial</span>
+      <p>O laboratório publica o <strong>resumo</strong> do registro de operações (ROPA). O documento completo é interno, com detalhes de sistemas, controles e responsáveis, e fica disponível à ANPD e aos titulares quando cabível, nos termos do art. 37 da LGPD.</p>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title">Nesta página</p>
+      <ol>
+        <li><a href="#papeis">Papéis e responsabilidades</a></li>
+        <li><a href="#obrigatorio">Obrigatório vs. boa prática</a></li>
+        <li><a href="#ropa">Resumo do ROPA</a></li>
+        <li><a href="#ripd">RIPD</a></li>
+        <li><a href="#dsar">Solicitações de titulares</a></li>
+        <li><a href="#incidentes">Incidentes</a></li>
+        <li><a href="#suboperadores">Suboperadores</a></li>
+        <li><a href="#ia">Transparência de IA</a></li>
+        <li><a href="#lacunas">Lacunas e próximos passos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="papeis">1. Papéis e responsabilidades</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Quem faz o quê na governança do projeto.</caption>
+        <thead>
+          <tr><th scope="col">Papel</th><th scope="col">Quem</th><th scope="col">Responsabilidade</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Controlador</th>
+            <td>Gabriel Jatobá — Jatobá Lab</td>
+            <td>Decidir finalidades e meios do tratamento; garantir base legal; atender titulares; comunicar incidentes.</td>
+          </tr>
+          <tr>
+            <th scope="row">Encarregado (DPO)</th>
+            <td>Gabriel Jatobá</td>
+            <td>Canal com titulares e ANPD; orientar internamente; registrar e acompanhar pedidos; revisar esta página.</td>
+          </tr>
+          <tr>
+            <th scope="row">Operador</th>
+            <td>Fornecedores listados na seção 7</td>
+            <td>Tratar dados conforme instruções e contratos; manter segurança; auxiliar no atendimento a titulares.</td>
+          </tr>
+          <tr>
+            <th scope="row">Suboperador</th>
+            <td>Provedores de nuvem, CDN, modelos e e-mail</td>
+            <td>Executar parte do tratamento sob cadeia contratual do operador.</td>
+          </tr>
+          <tr>
+            <th scope="row">Titular</th>
+            <td>Você</td>
+            <td>Exercer direitos; fornecer dados corretos; não enviar dados de terceiros sem base legal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Em projeto unipessoal, o acúmulo de funções é inevitável e permitido. O que não pode faltar é separação de <em>registro</em>: pedidos, decisões e incidentes ficam documentados para que a função de DPO não dependa apenas da memória.</p>
+
+    <h2 id="obrigatorio">2. Obrigatório vs. boa prática</h2>
+    <p>Nem tudo que aparece em uma página de transparência é exigência legal. Esta tabela separa o que a LGPD impõe do que o laboratório adota por escolha.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Classificação dos itens de governança.</caption>
+        <thead>
+          <tr><th scope="col">Item</th><th scope="col">Natureza</th><th scope="col">Referência</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Indicação de encarregado e canal</th>
+            <td>Obrigatório</td>
+            <td>Art. 41 da LGPD</td>
+          </tr>
+          <tr>
+            <th scope="row">Registro das operações de tratamento</th>
+            <td>Obrigatório</td>
+            <td>Art. 37 da LGPD</td>
+          </tr>
+          <tr>
+            <th scope="row">Informação clara sobre tratamento</th>
+            <td>Obrigatório</td>
+            <td>Arts. 9º e 18 da LGPD</td>
+          </tr>
+          <tr>
+            <th scope="row">Atendimento a direitos em 15 dias</th>
+            <td>Obrigatório</td>
+            <td>Art. 19 da LGPD</td>
+          </tr>
+          <tr>
+            <th scope="row">Comunicação de incidente relevante</th>
+            <td>Obrigatório</td>
+            <td>Art. 48 da LGPD + Resolução CD/ANPD nº 15/2024</td>
+          </tr>
+          <tr>
+            <th scope="row">Base legal para transferência internacional</th>
+            <td>Obrigatório</td>
+            <td>Art. 33 da LGPD</td>
+          </tr>
+          <tr>
+            <th scope="row">RIPD</th>
+            <td>Obrigatório quando exigido</td>
+            <td>Art. 38 da LGPD — hipóteses de alto risco ou determinação da ANPD</td>
+          </tr>
+          <tr>
+            <th scope="row">Política de privacidade publicada</th>
+            <td>Boa prática</td>
+            <td>Decorrente do dever de transparência (art. 6º, VI)</td>
+          </tr>
+          <tr>
+            <th scope="row">Resumo público do ROPA</th>
+            <td>Boa prática</td>
+            <td>Além do exigido no art. 37</td>
+          </tr>
+          <tr>
+            <th scope="row">Cabeçalhos de segurança e CSP</th>
+            <td>Boa prática</td>
+            <td>Medida do art. 46</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>security.txt</code></th>
+            <td>Boa prática</td>
+            <td>Canal de relato de vulnerabilidades</td>
+          </tr>
+          <tr>
+            <th scope="row">Sem cookies de rastreamento</th>
+            <td>Decisão de produto</td>
+            <td>Reduz risco e dispensa banner de consentimento</td>
+          </tr>
+          <tr>
+            <th scope="row">ZDR no gateway de IA</th>
+            <td>Boa prática contratual</td>
+            <td>Redução de retenção por terceiros</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="ropa">3. Resumo do ROPA</h2>
+    <p>O registro completo é interno. O resumo abaixo cobre as operações em escopo nesta versão, com titulares, dados, finalidade, base legal, retenção e destinatários.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Resumo das operações de tratamento — versão pública.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Operação</th>
+            <th scope="col">Titulares</th>
+            <th scope="col">Dados</th>
+            <th scope="col">Finalidade</th>
+            <th scope="col">Base legal</th>
+            <th scope="col">Retenção</th>
+            <th scope="col">Destinatários</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Site e contato</th>
+            <td>Visitantes e pessoas que escrevem</td>
+            <td>Nome, e-mail, mensagem</td>
+            <td>Responder e manter histórico</td>
+            <td>Art. 7º, V ou IX</td>
+            <td>24 meses</td>
+            <td>Hospedagem, e-mail</td>
+          </tr>
+          <tr>
+            <th scope="row">Segurança e logs</th>
+            <td>Visitantes</td>
+            <td>IP, data/hora, URL, user agent</td>
+            <td>Proteger e diagnosticar</td>
+            <td>Art. 7º, IX</td>
+            <td>90 dias</td>
+            <td>CDN, hospedagem</td>
+          </tr>
+          <tr>
+            <th scope="row">Pilotos experimentais</th>
+            <td>Participantes inscritos</td>
+            <td>Definidos no termo do piloto</td>
+            <td>Testar protótipo</td>
+            <td>Art. 7º, I ou V</td>
+            <td>Definida no piloto</td>
+            <td>Conforme piloto</td>
+          </tr>
+          <tr>
+            <th scope="row">Inferência de IA</th>
+            <td>Usuários de recursos de IA</td>
+            <td>Prompt, anexos, resposta, metadados</td>
+            <td>Executar o recurso</td>
+            <td>Art. 7º, V ou I</td>
+            <td>30 dias (traces)</td>
+            <td>OpenRouter, provedor de modelo</td>
+          </tr>
+          <tr>
+            <th scope="row">Observabilidade</th>
+            <td>Usuários de IA</td>
+            <td>Traces, latência, custo, avaliação</td>
+            <td>Qualidade e depuração</td>
+            <td>Art. 7º, IX</td>
+            <td>30 dias</td>
+            <td>Langfuse auto-hospedado</td>
+          </tr>
+          <tr>
+            <th scope="row">Gestão financeira</th>
+            <td>Clientes e fornecedores</td>
+            <td>Dados fiscais, contratuais e de cobrança</td>
+            <td>Cobrar e cumprir obrigações</td>
+            <td>Art. 7º, II e V</td>
+            <td>5 anos</td>
+            <td>Banco, contabilidade</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>O ROPA interno registra ainda: descrição do fluxo de dados, medidas de segurança por operação, responsável interno, contratos aplicáveis, avaliação de fornecedores e data da última revisão. Ele é atualizado quando uma operação muda de finalidade, base legal, retenção ou destinatário.</p>
+
+    <h2 id="ripd">4. RIPD — avaliação de impacto</h2>
+    <p>O RIPD (Relatório de Impacto à Proteção de Dados Pessoais) é exigido quando o tratamento pode gerar alto risco aos titulares ou quando a ANPD determina (art. 38). O laboratório adota a seguinte regra interna:</p>
+    <ul>
+      <li><strong>RIPD obrigatório</strong> para tratamento de dados sensíveis, perfilamento sistemático, decisões automatizadas com efeito relevante, uso de dados de crianças ou tecnologia nova com risco elevado.</li>
+      <li><strong>Triagem documentada</strong> para pilotos com IA que recebam dados de terceiros, mesmo sem dados sensíveis.</li>
+      <li><strong>Dispensa registrada</strong> quando a triagem conclui que não há alto risco, com justificativa.</li>
+    </ul>
+    <div class="table-scroll">
+      <table>
+        <caption>Situação atual dos instrumentos de avaliação.</caption>
+        <thead>
+          <tr><th scope="col">Instrumento</th><th scope="col">Situação</th><th scope="col">Observação</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Modelo de RIPD</th>
+            <td><span class="pill open">em elaboração</span></td>
+            <td>Estrutura com descrição do tratamento, necessidade, riscos, mitigação e parecer.</td>
+          </tr>
+          <tr>
+            <th scope="row">Triagem de pilotos</th>
+            <td><span class="pill ok">ativa</span></td>
+            <td>Nenhum piloto com dados sensíveis em operação nesta versão.</td>
+          </tr>
+          <tr>
+            <th scope="row">RIPD concluído</th>
+            <td><span class="pill">nenhum</span></td>
+            <td>Não há, nesta data, tratamento que se enquadre nas hipóteses de exigência.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Quando um RIPD for concluído, o resumo público indicará a operação, os riscos identificados e as medidas adotadas, sem expor informações de segurança que facilitem ataques.</p>
+
+    <h2 id="dsar">5. Solicitações de titulares (DSAR)</h2>
+    <p>O fluxo abaixo é usado para qualquer pedido do art. 18 da LGPD. Ele é simples de propósito: em um projeto pequeno, processo excessivo vira processo não cumprido.</p>
+    <ol>
+      <li><strong>Recebimento.</strong> O pedido chega ao e-mail do encarregado e recebe confirmação de leitura.</li>
+      <li><strong>Verificação de identidade.</strong> Confere-se que quem pede é o titular ou representante legal. Pede-se o mínimo necessário — nunca cópia de documento inteiro sem justificativa.</li>
+      <li><strong>Classificação.</strong> O pedido é enquadrado em um dos direitos do art. 18 e registrado com data, canal e prazo.</li>
+      <li><strong>Busca.</strong> Os dados são localizados nas fontes aplicáveis: caixa de e-mail, traces de IA, registros de pilotos, backups recentes.</li>
+      <li><strong>Decisão.</strong> Atende-se integralmente, parcialmente ou nega-se com fundamento legal. A resposta é clara, em linguagem acessível.</li>
+      <li><strong>Resposta e registro.</strong> Envio em até 15 dias (art. 19), com registro do que foi feito e do prazo.</li>
+    </ol>
+    <div class="table-scroll">
+      <table>
+        <caption>Prazos internos por tipo de pedido.</caption>
+        <thead>
+          <tr><th scope="col">Pedido</th><th scope="col">Prazo interno</th><th scope="col">Prazo legal</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Confirmação e acesso</th><td>10 dias</td><td>15 dias</td></tr>
+          <tr><th scope="row">Correção</th><td>10 dias</td><td>15 dias</td></tr>
+          <tr><th scope="row">Eliminação</th><td>10 dias</td><td>15 dias</td></tr>
+          <tr><th scope="row">Portabilidade</th><td>15 dias</td><td>15 dias</td></tr>
+          <tr><th scope="row">Revisão de decisão automatizada</th><td>15 dias</td><td>15 dias</td></tr>
+          <tr><th scope="row">Incidente com risco relevante</th><td>Imediato</td><td>3 dias úteis (ANPD)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Pedidos que exijam esforço desproporcional podem ser prorrogados com justificativa expressa ao titular, sem ultrapassar o razoável. Negativas sempre indicam a base legal.</p>
+    <p>Para abrir um pedido: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a>, assunto “LGPD — [pedido]”.</p>
+
+    <h2 id="incidentes">6. Incidentes de segurança</h2>
+    <p>O procedimento é intencionalmente curto e acionável:</p>
+    <ol>
+      <li><strong>Detecção e contenção</strong> — interromper o vetor, revogar credenciais, isolar sistemas.</li>
+      <li><strong>Registro</strong> — data, hora, sistemas, dados possivelmente afetados, evidências.</li>
+      <li><strong>Avaliação de risco</strong> — natureza dos dados, volume, titulares, possibilidade de dano, medidas de proteção existentes.</li>
+      <li><strong>Comunicação</strong> — se houver risco relevante, comunicar ANPD e titulares afetados no prazo regulamentar (3 dias úteis, Resolução CD/ANPD nº 15/2024), com as informações do art. 48, §1º.</li>
+      <li><strong>Remediação</strong> — corrigir a causa, reforçar controles, atualizar documentação.</li>
+      <li><strong>Revisão pós-incidente</strong> — registrar lições e, se necessário, revisar esta página.</li>
+    </ol>
+    <p>A comunicação à ANPD inclui, quando disponível: descrição do incidente, dados afetados, titulares, medidas técnicas de proteção, riscos e providências. Se algum dado ainda não for conhecido no prazo, a comunicação é feita com o que se sabe e complementada depois.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Registro de incidentes.</caption>
+        <thead>
+          <tr><th scope="col">Data</th><th scope="col">Descrição</th><th scope="col">Risco</th><th scope="col">Comunicação</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>—</td>
+            <td>Nenhum incidente com dados pessoais registrado até 3 de novembro de 2026.</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="suboperadores">7. Suboperadores</h2>
+    <p>Fornecedores são avaliados antes do uso e reavaliados quando há mudança relevante. A coluna “due diligence” indica o estágio atual — sem fingir contrato assinado onde ainda existe apenas aceite de termos padrão.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Suboperadores e estágio de avaliação.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Fornecedor</th>
+            <th scope="col">Serviço</th>
+            <th scope="col">Dados</th>
+            <th scope="col">Local</th>
+            <th scope="col">Due diligence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Leaseweb</th>
+            <td>Hospedagem</td>
+            <td>Logs, conteúdo</td>
+            <td>EUA</td>
+            <td><span class="pill ok">termos avaliados</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Cloudflare</th>
+            <td>CDN e DNS</td>
+            <td>IP, metadados</td>
+            <td>Global</td>
+            <td><span class="pill ok">termos avaliados</span></td>
+          </tr>
+          <tr>
+            <th scope="row">OpenRouter</th>
+            <td>Gateway de IA</td>
+            <td>Prompts, metadados</td>
+            <td>EUA</td>
+            <td><span class="pill ok">ZDR configurado</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Provedores de modelo</th>
+            <td>Inferência</td>
+            <td>Prompts, respostas</td>
+            <td>Variável</td>
+            <td><span class="pill open">caso a caso</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Langfuse</th>
+            <td>Observabilidade</td>
+            <td>Traces</td>
+            <td>Infra própria</td>
+            <td><span class="pill ok">auto-hospedado</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Provedor de e-mail</th>
+            <td>Caixa postal</td>
+            <td>Mensagens</td>
+            <td>Variável</td>
+            <td><span class="pill open">a formalizar</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Critérios de avaliação:</strong> existência de termos de tratamento publicados, política de retenção, opção de ZDR, localização da infraestrutura, histórico de incidentes, possibilidade de exportação e exclusão, e clareza sobre subcontratação.</p>
+
+    <h2 id="ia">8. Transparência de IA</h2>
+    <p>O laboratório mantém um inventário interno de sistemas de IA. A versão pública indica finalidade, dados e supervisão.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Sistemas de IA em escopo nesta versão.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Sistema</th>
+            <th scope="col">Finalidade</th>
+            <th scope="col">Dados</th>
+            <th scope="col">Supervisão</th>
+            <th scope="col">Risco</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Assistentes experimentais</th>
+            <td>Conversar, resumir e apoiar tarefas</td>
+            <td>Prompt, anexos, resposta</td>
+            <td>Revisão humana antes de uso externo</td>
+            <td>Médio</td>
+          </tr>
+          <tr>
+            <th scope="row">Automações de texto</th>
+            <td>Rascunhos, classificação e extração</td>
+            <td>Texto fornecido no fluxo</td>
+            <td>Amostragem e correção</td>
+            <td>Baixo a médio</td>
+          </tr>
+          <tr>
+            <th scope="row">Observabilidade e avaliação</th>
+            <td>Medir qualidade e falhas</td>
+            <td>Traces e métricas</td>
+            <td>Revisão do responsável</td>
+            <td>Baixo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Compromissos de transparência:</strong></p>
+    <ul>
+      <li>informar quando um conteúdo é gerado por IA, se houver risco de confusão;</li>
+      <li>não usar dados de titulares para treinar modelos próprios sem base legal e informação clara;</li>
+      <li>não tomar decisões de alto impacto sem revisão humana (art. 20);</li>
+      <li>registrar os modelos e provedores usados em cada piloto;</li>
+      <li>permitir que o titular peça explicação sobre o uso de seus dados em IA.</li>
+    </ul>
+    <p>O gateway está configurado para negar coleta e exigir retenção zero. Isso vale para provedores que suportam a política; modelos sem suporte não devem ser usados com dados pessoais. A lista de modelos permitidos é interna e revisada antes de cada piloto.</p>
+
+    <h2 id="lacunas">9. Lacunas e próximos passos</h2>
+    <p>O que ainda não está pronto, com prioridade e critério de conclusão. Esta lista é atualizada a cada versão.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Plano de maturidade de privacidade.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Prioridade</th>
+            <th scope="col">Critério de conclusão</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Definir pessoa jurídica e CNPJ</th>
+            <td>Alta, se houver cobrança</td>
+            <td>Razão social e CNPJ publicados nesta página e nos termos</td>
+          </tr>
+          <tr>
+            <th scope="row">Criar <code>lgpd@jatoba.tech</code></th>
+            <td>Alta</td>
+            <td>Caixa monitorada, com resposta em 15 dias</td>
+          </tr>
+          <tr>
+            <th scope="row">Formalizar DPA com fornecedores críticos</th>
+            <td>Alta</td>
+            <td>Contrato ou aditivo assinado para hospedagem, gateway e e-mail</td>
+          </tr>
+          <tr>
+            <th scope="row">Concluir modelo de RIPD</th>
+            <td>Média</td>
+            <td>Modelo aprovado e usado na triagem de todo piloto</td>
+          </tr>
+          <tr>
+            <th scope="row">Automatizar expurgo de retenção</th>
+            <td>Média</td>
+            <td>Rotina que elimina logs e traces nos prazos declarados</td>
+          </tr>
+          <tr>
+            <th scope="row">Registro formal de consentimentos</th>
+            <td>Média</td>
+            <td>Histórico com data, finalidade, versão do texto e revogação</td>
+          </tr>
+          <tr>
+            <th scope="row">Teste de restauração de backup</th>
+            <td>Média</td>
+            <td>Registro de teste semestral com resultado</td>
+          </tr>
+          <tr>
+            <th scope="row">Revisão jurídica dos documentos</th>
+            <td>Média</td>
+            <td>Parecer sobre política, termos e DPA antes de escala comercial</td>
+          </tr>
+          <tr>
+            <th scope="row">Inventário de modelos permitidos</th>
+            <td>Baixa</td>
+            <td>Lista com ZDR confirmado por provedor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="contato">10. Contato</h2>
+    <dl class="deflist">
+      <dt>Encarregado (DPO)</dt>
+      <dd>Gabriel Jatobá</dd>
+
+      <dt>E-mail</dt>
+      <dd><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
+
+      <dt>Assunto</dt>
+      <dd>“LGPD — [pedido / incidente / dúvida]”</dd>
+
+      <dt>Documentos relacionados</dt>
+      <dd><a href="/privacidade.html">Política de Privacidade</a> · <a href="/termos.html">Termos de Uso</a> · <a href="/.well-known/security.txt">security.txt</a></dd>
+
+      <dt>Autoridade</dt>
+      <dd><a href="https://www.gov.br/anpd/" rel="noopener noreferrer">ANPD</a></dd>
+    </dl>
+
+    <div class="callout warn">
+      <span class="callout-title">Sem selo de conformidade</span>
+      <p>O Jatobá Lab não possui certificação de LGPD, ISO 27001 ou equivalente. Esta página descreve práticas e intenções, não atesta conformidade independente. Trate-a como documentação viva, sujeita a correção.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p><strong>Jatobá Lab</strong> — projeto pessoal de Gabriel Jatobá. Brasil.</p>
+        <p>Privacidade e DPO: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos</a></li>
+          <li><a href="/lgpd.html">LGPD</a></li>
+          <li><a href="/modelo.html">Modelo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="fine">Versão 1.0 · Última atualização: 3 de novembro de 2026. Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+  </div>
+</footer>
+</body>
+</html>

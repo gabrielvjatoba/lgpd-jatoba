@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[CONTROLADOR] — Privacidade e Transparência</title>
+<meta name="description" content="Política de privacidade e transparência de [CONTROLADOR].">
+<link rel="canonical" href="https://[DOMÍNIO]/">
+<style>
+/* Starter autocontido. Ao publicar com CSP restritiva, mova este bloco para styles.css. */
+:root{--bg:#fbfaf7;--surface:#fff;--ink:#171714;--muted:#55554c;--line:#dcd8cd;--accent:#175c46;--accent-soft:#e9f1ec;--warn:#6f4300;--warn-soft:#fdf3e1}
+@media (prefers-color-scheme:dark){:root{--bg:#12130f;--surface:#1a1b16;--ink:#eceade;--muted:#b3b1a3;--line:#33352c;--accent:#8fd0b4;--accent-soft:#1d2a24;--warn:#f0c17a;--warn-soft:#2a2213}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:0 1.25rem}
+a{color:var(--accent);text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.banner{background:var(--warn-soft);color:var(--warn);border-bottom:1px solid var(--warn);padding:.7rem 0;font-size:.9rem;font-weight:600}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0}
+.brand{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;flex-wrap:wrap;gap:.2rem 1rem;list-style:none;margin:.75rem 0 0;padding:0;font-size:.92rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+main{padding:2.25rem 0 3rem}
+h1{font-size:clamp(1.9rem,4.6vw,2.5rem);line-height:1.2;margin:0 0 .75rem;letter-spacing:-.015em}
+h2{font-size:1.35rem;margin:2.5rem 0 .75rem;padding-top:1.25rem;border-top:1px solid var(--line);line-height:1.25}
+h3{font-size:1.05rem;margin:1.5rem 0 .4rem}
+p,ul,ol{margin:0 0 1rem}
+ul,ol{padding-left:1.3rem}
+li{margin-bottom:.35rem}
+.lead{font-size:1.15rem;color:var(--muted);max-width:62ch}
+.meta{font-size:.88rem;color:var(--muted)}
+.callout{border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;padding:1rem 1.15rem;margin:1.5rem 0}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.callout p:last-child{margin-bottom:0}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:1.25rem 0;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px}
+th,td{text-align:left;vertical-align:top;padding:.7rem .9rem;border-bottom:1px solid var(--line)}
+thead th{background:var(--accent-soft);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+tbody th{font-weight:600;white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:2rem 0;font-size:.88rem;color:var(--muted)}
+footer p{margin:0 0 .4rem}
+@media print{.banner,header.site,footer{display:none}body{background:#fff;color:#000}.table-scroll{overflow:visible}}
+</style>
+</head>
+<body>
+
+<div class="banner" role="note">
+  Modelo — adapte e revise antes de publicar. Este texto não é parecer jurídico e contém marcadores como [CONTROLADOR].
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">[CONTROLADOR]</a>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#controlador">Privacidade</a></li>
+        <li><a href="#dados">Dados</a></li>
+        <li><a href="#direitos">Seus direitos</a></li>
+        <li><a href="#ia">IA</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <h1>Privacidade e transparência</h1>
+    <p class="lead">Esta página explica como [CONTROLADOR] trata dados pessoais: o que coleta, por quê, com quem compartilha, por quanto tempo guarda e como você pode exercer seus direitos.</p>
+    <p class="meta">Versão [VERSÃO] · Última atualização: [DATA]</p>
+
+    <div class="callout warn">
+      <strong>Antes de publicar:</strong> substitua todos os marcadores entre colchetes, apague as seções que não se aplicam e revise o texto com apoio jurídico. Modelo informativo, sem garantia de adequação ao seu caso.
+    </div>
+
+    <h2 id="controlador">Quem é o controlador</h2>
+    <ul>
+      <li><strong>Controlador:</strong> [CONTROLADOR]</li>
+      <li><strong>CNPJ / natureza:</strong> [CNPJ]</li>
+      <li><strong>Endereço:</strong> [ENDEREÇO]</li>
+      <li><strong>Encarregado (DPO):</strong> [DPO]</li>
+      <li><strong>Contato de privacidade:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+    </ul>
+    <p>O encarregado é o canal entre você, o controlador e a Autoridade Nacional de Proteção de Dados (ANPD), nos termos do art. 41 da LGPD.</p>
+
+    <h2 id="dados">Quais dados tratamos</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Substitua por um inventário real. Não descreva coleta que não existe.</caption>
+        <thead>
+          <tr><th scope="col">Categoria</th><th scope="col">Exemplos</th><th scope="col">Origem</th><th scope="col">Finalidade</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Identificação</th><td>Nome, e-mail</td><td>Você fornece</td><td>Contato e atendimento</td></tr>
+          <tr><th scope="row">Registros técnicos</th><td>IP, data/hora, URL</td><td>Hospedagem</td><td>Segurança e diagnóstico</td></tr>
+          <tr><th scope="row">[CATEGORIA]</th><td>[EXEMPLOS]</td><td>[ORIGEM]</td><td>[FINALIDADE]</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="bases">Bases legais</h2>
+    <p>Tratamos dados com base nas hipóteses do art. 7º da LGPD, conforme a finalidade:</p>
+    <ul>
+      <li><strong>Execução de contrato ou procedimentos preliminares</strong> (art. 7º, V) — para atender pedidos e prestar o serviço contratado.</li>
+      <li><strong>Legítimo interesse</strong> (art. 7º, IX) — para segurança, prevenção a fraude e diagnóstico técnico, com avaliação de necessidade e equilíbrio.</li>
+      <li><strong>Consentimento</strong> (art. 7º, I) — quando exigido, com possibilidade de revogação a qualquer momento.</li>
+      <li><strong>Obrigação legal ou regulatória</strong> (art. 7º, II) — para cumprir deveres fiscais, contábeis e regulatórios.</li>
+      <li><strong>Exercício regular de direitos</strong> (art. 7º, VI) — em processos administrativos ou judiciais.</li>
+    </ul>
+    <p>Dados sensíveis (art. 11) só são tratados com hipótese específica e, quando necessário, mediante consentimento destacado e avaliação de impacto.</p>
+
+    <h2 id="compartilhamento">Compartilhamento e fornecedores</h2>
+    <p>Não vendemos dados pessoais. Compartilhamos apenas com fornecedores necessários à operação:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Fornecedor</th><th scope="col">Serviço</th><th scope="col">Dados</th><th scope="col">País</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">[PROVEDOR 1]</th><td>Hospedagem</td><td>Logs e conteúdo</td><td>[PAÍS]</td></tr>
+          <tr><th scope="row">[PROVEDOR 2]</th><td>CDN / e-mail</td><td>Metadados e mensagens</td><td>[PAÍS]</td></tr>
+          <tr><th scope="row">[PROVEDOR 3]</th><td>Gateway de IA</td><td>Prompts e respostas</td><td>[PAÍS]</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="transferencia">Transferência internacional</h2>
+    <p>Alguns fornecedores tratam dados fora do Brasil, em [PAÍSES]. A transferência se apoia no art. 33 da LGPD, conforme o caso: cláusulas contratuais específicas, consentimento específico ou outra hipótese legal aplicável. Não há decisão de adequação automática para todos os países; os mecanismos são avaliados por fornecedor.</p>
+
+    <h2 id="retencao">Por quanto tempo guardamos</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Categoria</th><th scope="col">Prazo</th><th scope="col">Motivo</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Registros de acesso</th><td>[PRAZO]</td><td>Segurança</td></tr>
+          <tr><th scope="row">Mensagens de contato</th><td>[PRAZO]</td><td>Atendimento</td></tr>
+          <tr><th scope="row">Dados contratuais</th><td>[PRAZO]</td><td>Obrigações legais</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Encerrado o prazo, os dados são eliminados ou anonimizados, salvo hipótese legal de conservação.</p>
+
+    <h2 id="seguranca">Segurança</h2>
+    <p>Adotamos medidas técnicas e administrativas proporcionais ao risco (art. 46), como HTTPS, controle de acesso, autenticação em dois fatores e backups. Nenhum sistema é imune a falhas; não prometemos risco zero. Incidentes com risco relevante são comunicados à ANPD e aos titulares afetados (art. 48).</p>
+
+    <h2 id="direitos">Seus direitos</h2>
+    <p>Você pode solicitar, nos termos do art. 18 da LGPD:</p>
+    <ul>
+      <li>confirmação da existência de tratamento e acesso aos dados;</li>
+      <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou ilícitos;</li>
+      <li>portabilidade, quando aplicável;</li>
+      <li>eliminação de dados tratados com consentimento;</li>
+      <li>informação sobre compartilhamento e sobre a possibilidade de não consentir;</li>
+      <li>revogação do consentimento e oposição a tratamentos específicos;</li>
+      <li>revisão de decisões automatizadas que afetem seus interesses.</li>
+    </ul>
+    <p>Envie o pedido para <a href="mailto:[EMAIL]">[EMAIL]</a>. A resposta é dada em até 15 dias (art. 19), salvo justificativa expressa.</p>
+
+    <h2 id="cookies">Cookies</h2>
+    <p>[DESCREVA OS COOKIES REAIS. Se não houver, diga: “Este site não usa cookies de análise ou publicidade.” Mencione cookies essenciais de segurança, se existirem.]</p>
+
+    <h2 id="ia">Inteligência artificial (se aplicável)</h2>
+    <p>Se o serviço usa modelos de IA, descreva: quais dados vão no prompt, se há memória, quanto tempo traces são retidos, quais provedores recebem os dados e se há retenção zero configurada. Não afirme que “nenhum provedor treina” sem verificar contrato e configuração.</p>
+    <p>Saídas de IA podem errar e não substituem aconselhamento profissional. Decisões de alto impacto têm revisão humana (art. 20).</p>
+
+    <h2 id="alteracoes">Alterações</h2>
+    <p>Esta página pode ser atualizada. A versão e a data ficam no topo; mudanças relevantes são destacadas por pelo menos 30 dias.</p>
+
+    <h2 id="contato">Contato</h2>
+    <ul>
+      <li><strong>Encarregado:</strong> [DPO]</li>
+      <li><strong>E-mail:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+      <li><strong>Endereço:</strong> [ENDEREÇO]</li>
+      <li><strong>ANPD:</strong> <a href="https://www.gov.br/anpd/" rel="noopener noreferrer">gov.br/anpd</a></li>
+    </ul>
+
+    <div class="callout">
+      <strong>Checklist rápido:</strong> troque os marcadores · confira bases legais · confira prazos de retenção · liste todos os fornecedores · ajuste a seção de IA · valide com apoio jurídico · publique e teste os links.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>[CONTROLADOR]</strong> — [ENDEREÇO]</p>
+    <p>Privacidade: <a href="mailto:[EMAIL]">[EMAIL]</a></p>
+    <p>Versão [VERSÃO] · [DATA] · Modelo informativo; não constitui parecer jurídico.</p>
+  </div>
+</footer>
+</body>
+</html>

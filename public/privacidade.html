@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Jatobá Lab</title>
+<meta name="description" content="Política de Privacidade do Jatobá Lab: dados tratados, finalidades, bases legais, uso de IA, compartilhamento, transferência internacional, retenção, segurança e direitos do titular.">
+<link rel="canonical" href="https://lgpd.jatoba.tech/privacidade.html">
+<meta name="theme-color" content="#175c46">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Política de Privacidade — Jatobá Lab">
+<meta property="og:description" content="Como o Jatobá Lab trata dados pessoais, inclusive em pilotos com inteligência artificial.">
+<meta property="og:url" content="https://lgpd.jatoba.tech/privacidade.html">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">JL</span>
+      <span class="brand-text">Jatobá Lab<span class="brand-sub">Transparência &amp; LGPD</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/privacidade.html" aria-current="page">Privacidade</a></li>
+        <li><a href="/termos.html">Termos</a></li>
+        <li><a href="/lgpd.html">LGPD</a></li>
+        <li><a href="/modelo.html">Modelo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <div class="wrap">
+    <p class="eyebrow">Documento legal</p>
+    <h1>Política de Privacidade</h1>
+    <p class="lead">Esta política explica quais dados pessoais o Jatobá Lab trata, com quais finalidades, com base em quais hipóteses legais, com quem compartilha, por quanto tempo guarda e como você pode exercer seus direitos.</p>
+    <p class="meta">Versão <strong>1.0</strong> · Vigente desde <strong>3 de novembro de 2026</strong> · Última atualização: <strong>3 de novembro de 2026</strong></p>
+
+    <div class="callout warn">
+      <span class="callout-title">Este documento não é parecer jurídico</span>
+      <p>Ele descreve as práticas do projeto e as obrigações que o próprio controlador entende aplicáveis. Não há certificação, selo ou auditoria externa. Onde um dado ainda não existe — CNPJ, contratos formalizados, pareceres —, isso é dito de forma explícita.</p>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title">Nesta página</p>
+      <ol>
+        <li><a href="#resumo">Resumo em 10 pontos</a></li>
+        <li><a href="#controlador">Controlador e encarregado</a></li>
+        <li><a href="#escopo">Escopo e papéis</a></li>
+        <li><a href="#dados">Dados que tratamos</a></li>
+        <li><a href="#finalidades">Finalidades e bases legais</a></li>
+        <li><a href="#sensiveis">Dados sensíveis</a></li>
+        <li><a href="#ia">Inteligência artificial</a></li>
+        <li><a href="#compartilhamento">Compartilhamento</a></li>
+        <li><a href="#transferencia">Transferência internacional</a></li>
+        <li><a href="#retencao">Retenção</a></li>
+        <li><a href="#seguranca">Segurança</a></li>
+        <li><a href="#direitos">Seus direitos</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#automatizadas">Decisões automatizadas</a></li>
+        <li><a href="#incidentes">Incidentes</a></li>
+        <li><a href="#criancas">Crianças e adolescentes</a></li>
+        <li><a href="#alteracoes">Alterações</a></li>
+        <li><a href="#contato">Contato e ANPD</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="resumo">1. Resumo em 10 pontos</h2>
+    <ol>
+      <li>O controlador é <strong>Gabriel Jatobá — Jatobá Lab</strong>, pessoa física, projeto pessoal sediado no Brasil.</li>
+      <li>O encarregado (DPO) é <strong>Gabriel Jatobá</strong>, contatável em <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a>.</li>
+      <li>O site é estático: não usa cookies de análise, publicidade, pixels ou JavaScript de terceiros.</li>
+      <li>Os dados tratados vêm de três fontes: o que você envia, registros técnicos automáticos e o uso de pilotos com IA.</li>
+      <li>Toda finalidade tem uma base legal declarada, conforme o art. 7º da LGPD. Não há tratamento “para tudo”.</li>
+      <li>O laboratório não pede dados sensíveis. Se um piloto exigir, haverá base específica do art. 11 e avaliação de impacto.</li>
+      <li>O gateway de IA (OpenRouter) está configurado para negar coleta e exigir retenção zero. Provedores variam e são verificados caso a caso.</li>
+      <li>Há transferência internacional para os EUA (hospedagem, CDN e gateway). Os mecanismos estão descritos na seção 9.</li>
+      <li>Você pode pedir confirmação, acesso, correção, eliminação, portabilidade e revisão de decisões automatizadas; o prazo de resposta é de 15 dias (art. 19).</li>
+      <li>Incidentes com risco relevante são comunicados à ANPD e aos titulares afetados (art. 48).</li>
+    </ol>
+
+    <h2 id="controlador">2. Controlador e encarregado</h2>
+    <dl class="deflist">
+      <dt>Controlador</dt>
+      <dd>Gabriel Jatobá — Jatobá Lab<br>Pessoa física, projeto pessoal<br>Brasil</dd>
+
+      <dt>Encarregado (DPO)</dt>
+      <dd>Gabriel Jatobá<br>Contato: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
+
+      <dt>Natureza jurídica</dt>
+      <dd>Projeto pessoal ainda sem pessoa jurídica constituída. Não há CNPJ próprio nesta versão. Se o projeto se tornar sociedade empresária, esta seção será atualizada com razão social e CNPJ.</dd>
+
+      <dt>Idioma e foro</dt>
+      <dd>Documento redigido em português do Brasil, regido pela Lei nº 13.709/2018 (LGPD) e demais normas brasileiras aplicáveis.</dd>
+    </dl>
+    <p>O encarregado atua como canal de comunicação entre o controlador, os titulares e a Autoridade Nacional de Proteção de Dados (ANPD), nos termos do art. 41 da LGPD. Em um projeto unipessoal, a mesma pessoa acumula as funções — o que é permitido, mas não elimina a necessidade de registrar e responder pedidos com método.</p>
+
+    <h2 id="escopo">3. Escopo e papéis</h2>
+    <p>Esta política se aplica ao site <code>lgpd.jatoba.tech</code>, aos canais de contato do Jatobá Lab e aos pilotos experimentais conduzidos diretamente por Gabriel Jatobá.</p>
+    <p>É importante separar três situações:</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Quem é o controlador em cada contexto.</caption>
+        <thead>
+          <tr><th scope="col">Situação</th><th scope="col">Controlador</th><th scope="col">Documento aplicável</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Uso deste site e contato direto</th>
+            <td>Gabriel Jatobá — Jatobá Lab</td>
+            <td>Esta política</td>
+          </tr>
+          <tr>
+            <th scope="row">Piloto experimental do laboratório</th>
+            <td>Gabriel Jatobá — Jatobá Lab</td>
+            <td>Esta política + termo específico do piloto</td>
+          </tr>
+          <tr>
+            <th scope="row">Projeto entregue a um cliente (ex.: Kactux, SASGP)</th>
+            <td>O cliente, conforme contrato</td>
+            <td>Política do cliente + DPA do contrato</td>
+          </tr>
+          <tr>
+            <th scope="row">Ferramenta usada internamente em nome de cliente</th>
+            <td>O cliente</td>
+            <td>DPA e instruções documentadas do cliente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Quando o Jatobá Lab atua como <strong>operador</strong>, ele trata dados apenas conforme as instruções do controlador e não os utiliza para finalidades próprias. Esta política não substitui o DPA nem a política do cliente.</p>
+
+    <h2 id="dados">4. Dados que tratamos</h2>
+    <p>A tabela abaixo é um inventário prático. “Origem” indica de onde o dado vem; “obrigatório” indica se a ausência impede a prestação daquele recurso.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Categorias de dados pessoais tratados pelo Jatobá Lab.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Categoria</th>
+            <th scope="col">Exemplos</th>
+            <th scope="col">Origem</th>
+            <th scope="col">Obrigatório?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Identificação e contato</th>
+            <td>Nome, e-mail, eventual telefone ou perfil informado na mensagem</td>
+            <td>Você fornece</td>
+            <td>Sim, para responder</td>
+          </tr>
+          <tr>
+            <th scope="row">Conteúdo da comunicação</th>
+            <td>Texto da mensagem, anexos, histórico da conversa</td>
+            <td>Você fornece</td>
+            <td>Sim, para responder</td>
+          </tr>
+          <tr>
+            <th scope="row">Registros técnicos de acesso</th>
+            <td>Endereço IP, data e hora, URL acessada, user agent, código de resposta HTTP</td>
+            <td>Gerado automaticamente pela hospedagem e pela CDN</td>
+            <td>Sim, para operar e proteger o site</td>
+          </tr>
+          <tr>
+            <th scope="row">Dados de pilotos</th>
+            <td>Informações que você decide enviar para testar um protótipo</td>
+            <td>Você fornece</td>
+            <td>Depende do piloto</td>
+          </tr>
+          <tr>
+            <th scope="row">Interações com IA</th>
+            <td>Prompts, arquivos enviados, respostas geradas, parâmetros do modelo, metadados de uso</td>
+            <td>Você fornece / gerado no uso</td>
+            <td>Sim, para executar o recurso</td>
+          </tr>
+          <tr>
+            <th scope="row">Memória de assistente</th>
+            <td>Preferências e fatos que você pediu para lembrar entre sessões</td>
+            <td>Você fornece</td>
+            <td>Não — é opcional e pode ser apagada</td>
+          </tr>
+          <tr>
+            <th scope="row">Dados financeiros</th>
+            <td>Dados de cobrança, quando houver contratação</td>
+            <td>Você fornece / processadora de pagamento</td>
+            <td>Sim, se houver cobrança</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>O que não coletamos:</strong> não há cadastro obrigatório para ler este site, não há perfilamento publicitário, não há venda de dados e não há enriquecimento com bases de terceiros. Dados de cartão, quando existirem, são processados por operadora especializada e não ficam armazenados no laboratório.</p>
+
+    <h2 id="finalidades">5. Finalidades e bases legais</h2>
+    <p>Cada operação tem uma finalidade determinada e uma hipótese legal do art. 7º da LGPD. Quando a base é o legítimo interesse, o laboratório faz uma avaliação de necessidade e equilíbrio e oferece canal de oposição.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Finalidades, bases legais e o que acontece se você se opuser.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Finalidade</th>
+            <th scope="col">Dados</th>
+            <th scope="col">Base legal (art. 7º)</th>
+            <th scope="col">Se você se opuser</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Responder mensagens e pedidos</th>
+            <td>Identificação, contato e conteúdo</td>
+            <td>Procedimentos preliminares e execução de contrato (V) ou legítimo interesse (IX), conforme o caso</td>
+            <td>Não é possível responder sem os dados de contato</td>
+          </tr>
+          <tr>
+            <th scope="row">Operar e proteger o site</th>
+            <td>Registros técnicos de acesso</td>
+            <td>Legítimo interesse (IX): segurança, prevenção a fraude e disponibilidade</td>
+            <td>O site continua acessível; a oposição é avaliada e registrada</td>
+          </tr>
+          <tr>
+            <th scope="row">Executar pilotos e protótipos</th>
+            <td>Dados do piloto e interações</td>
+            <td>Consentimento (I) ou execução de contrato (V), conforme o piloto</td>
+            <td>O piloto não é executado ou é interrompido</td>
+          </tr>
+          <tr>
+            <th scope="row">Prestar recursos de IA</th>
+            <td>Prompts, arquivos, respostas, metadados</td>
+            <td>Execução de contrato (V) ou consentimento (I)</td>
+            <td>O recurso de IA não funciona</td>
+          </tr>
+          <tr>
+            <th scope="row">Segurança, logs e diagnóstico de falhas</th>
+            <td>Registros técnicos e traces</td>
+            <td>Legítimo interesse (IX)</td>
+            <td>Avaliação individual; logs estritamente necessários podem ser mantidos</td>
+          </tr>
+          <tr>
+            <th scope="row">Cumprir obrigações legais e regulatórias</th>
+            <td>Dados fiscais, contratuais e registros exigidos</td>
+            <td>Obrigação legal ou regulatória (II)</td>
+            <td>Não há oposição possível enquanto a obrigação existir</td>
+          </tr>
+          <tr>
+            <th scope="row">Exercer direitos em processo</th>
+            <td>Dados pertinentes ao litígio</td>
+            <td>Exercício regular de direitos (VI)</td>
+            <td>Não há oposição possível quanto ao necessário</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Legítimo interesse em detalhe</h3>
+    <p>O legítimo interesse é usado apenas para segurança, prevenção a abuso e diagnóstico técnico. O teste aplicado é: (a) existe um interesse legítimo concreto; (b) o tratamento é necessário para ele; (c) os direitos do titular não prevalecem no caso concreto. Você pode se opor a qualquer momento pelo canal do encarregado, e a oposição será analisada caso a caso.</p>
+
+    <h2 id="sensiveis">6. Dados sensíveis</h2>
+    <p>O laboratório <strong>não solicita</strong> dados pessoais sensíveis (art. 5º, II, da LGPD), como origem racial ou étnica, convicção religiosa, opinião política, filiação sindical, dados de saúde, vida sexual, dados genéticos ou biométricos.</p>
+    <p>Se um piloto específico precisar tratar dados sensíveis, isso só ocorrerá com:</p>
+    <ul>
+      <li>hipótese do art. 11 da LGPD expressamente identificada;</li>
+      <li>finalidade específica e informada de forma destacada;</li>
+      <li>avaliação de impacto à proteção de dados (RIPD) quando o risco for elevado;</li>
+      <li>medidas de segurança proporcionais e prazo de retenção reduzido.</li>
+    </ul>
+    <div class="callout">
+      <span class="callout-title">Pedido prático</span>
+      <p>Não envie dados sensíveis, documentos de terceiros ou informações confidenciais por e-mail ou em prompts sem que isso tenha sido combinado. Se o caso exigir, o canal e as salvaguardas serão definidos antes do envio.</p>
+    </div>
+
+    <h2 id="ia">7. Inteligência artificial: prompts, memória, logs e traces</h2>
+    <p>Parte dos experimentos do Jatobá Lab usa modelos de linguagem. Esta seção descreve o que acontece com o conteúdo enviado.</p>
+
+    <h3>7.1 O que é enviado ao modelo</h3>
+    <p>Para gerar uma resposta, o conteúdo do seu prompt — e, quando você anexa arquivos, o conteúdo desses arquivos — é transmitido ao provedor do modelo escolhido, passando pelo gateway OpenRouter. Também são enviados parâmetros técnicos da chamada, como o nome do modelo e o tamanho da entrada.</p>
+
+    <h3>7.2 Configuração do gateway</h3>
+    <p>O gateway está configurado para <strong>negar coleta de dados e exigir zero data retention (ZDR)</strong> nos provedores que suportam essa política. Isso reduz a retenção do lado do provedor, mas não é uma garantia universal:</p>
+    <ul>
+      <li>provedores diferentes têm políticas e prazos diferentes;</li>
+      <li>alguns modelos podem não suportar ZDR e, nesse caso, não devem ser usados com dados pessoais;</li>
+      <li>a verificação é feita caso a caso, antes de cada piloto que trate dados de terceiros.</li>
+    </ul>
+    <p>O laboratório não afirma que “todos os provedores não treinam com seus dados”. Afirma que o gateway está configurado para negar coleta e exigir ZDR e que provedores são avaliados individualmente.</p>
+
+    <h3>7.3 Memória</h3>
+    <p>Quando um assistente tem memória entre sessões, ele guarda apenas o que você escolheu compartilhar — preferências, contexto do projeto, fatos que você pediu para lembrar. A memória é opcional, pode ser consultada, corrigida e apagada pelo canal do encarregado, e não é usada para publicidade.</p>
+
+    <h3>7.4 Logs e traces</h3>
+    <p>Para depurar falhas e medir qualidade, o laboratório usa <strong>Langfuse auto-hospedado</strong> em infraestrutura própria. Traces podem conter o texto do prompt, a resposta, latência, custo e metadados técnicos. Medidas adotadas:</p>
+    <ul>
+      <li>acesso restrito ao responsável pelo projeto;</li>
+      <li>retenção padrão de até 30 dias para traces de pilotos, salvo prazo diferente definido no termo do piloto;</li>
+      <li>remoção ou mascaramento de campos sensíveis antes do envio, quando o caso exigir;</li>
+      <li>possibilidade de desativar a captura de conteúdo, mantendo apenas métricas.</li>
+    </ul>
+
+    <h3>7.5 O que você não deve enviar</h3>
+    <p>Não envie para prompts: senhas, chaves de API, dados de cartão, documentos de identidade de terceiros, prontuários, dados de crianças ou qualquer dado sensível sem acordo prévio. O conteúdo enviado é de sua responsabilidade; se envolver dados de terceiros, você declara ter base legal para isso.</p>
+
+    <h3>7.6 Saídas de IA</h3>
+    <p>Respostas de modelos podem estar erradas, desatualizadas ou inventar fatos. Elas não são aconselhamento jurídico, médico, financeiro ou contábil. Antes de usar uma saída em produção, faça revisão humana. A seção 14 trata de decisões automatizadas e do direito de revisão.</p>
+
+    <h2 id="compartilhamento">8. Compartilhamento e suboperadores</h2>
+    <p>O laboratório não vende dados pessoais. O compartilhamento ocorre apenas com fornecedores necessários à operação, sob obrigações contratuais de confidencialidade e segurança, e com autoridades quando houver determinação legal.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Fornecedores que podem tratar dados por conta do Jatobá Lab.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Fornecedor</th>
+            <th scope="col">Papel</th>
+            <th scope="col">Dados envolvidos</th>
+            <th scope="col">Local</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Leaseweb</th>
+            <td>Hospedagem de infraestrutura</td>
+            <td>Registros técnicos, conteúdo hospedado</td>
+            <td>Estados Unidos</td>
+          </tr>
+          <tr>
+            <th scope="row">Cloudflare</th>
+            <td>CDN, DNS e proteção de borda</td>
+            <td>IP, metadados de requisição, cookie essencial de segurança</td>
+            <td>Rede global (EUA e outros)</td>
+          </tr>
+          <tr>
+            <th scope="row">OpenRouter</th>
+            <td>Gateway de modelos de IA</td>
+            <td>Prompts, respostas, metadados de uso</td>
+            <td>Estados Unidos</td>
+          </tr>
+          <tr>
+            <th scope="row">Provedores de modelo</th>
+            <td>Processamento das inferências</td>
+            <td>Prompts e respostas, conforme o modelo escolhido</td>
+            <td>Variável</td>
+          </tr>
+          <tr>
+            <th scope="row">Langfuse (auto-hospedado)</th>
+            <td>Observabilidade de IA</td>
+            <td>Traces, métricas, avaliações</td>
+            <td>Infraestrutura do projeto</td>
+          </tr>
+          <tr>
+            <th scope="row">Provedor de e-mail</th>
+            <td>Caixa postal e envio</td>
+            <td>Mensagens e endereços de contato</td>
+            <td>Variável</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Autoridades públicas recebem dados apenas mediante requisição legal, com registro interno do pedido e da resposta. Em caso de reorganização do projeto, os dados podem ser transferidos a sucessor que assuma as mesmas obrigações, com comunicação aos titulares quando cabível.</p>
+
+    <h2 id="transferencia">9. Transferência internacional de dados</h2>
+    <p>O tratamento envolve transferência para fora do Brasil, principalmente para os <strong>Estados Unidos</strong>, em razão da hospedagem (Leaseweb), da CDN (Cloudflare) e do gateway de IA (OpenRouter e provedores de modelo).</p>
+    <p>Essa transferência se apoia nas hipóteses do art. 33 da LGPD, conforme o caso:</p>
+    <ul>
+      <li><strong>Art. 33, II</strong> — cláusulas contratuais específicas, nos termos padrão dos fornecedores, quando o país de destino não possui decisão de adequação;</li>
+      <li><strong>Art. 33, IX</strong> — consentimento específico e destacado, quando nenhuma outra hipótese se aplicar e o titular for previamente informado;</li>
+      <li><strong>Art. 33, VI e VII</strong> — obrigação legal, cooperação jurídica ou exercício regular de direitos, quando aplicável.</li>
+    </ul>
+    <p>Boas práticas adotadas: avaliação do fornecedor antes da contratação, preferência por provedores com termos de tratamento publicados, exigência de ZDR no gateway de IA e redução do volume de dados enviados. O laboratório <strong>não afirma</strong> que existe decisão de adequação da ANPD para os EUA; enquanto ela não existir, a base contratual é o caminho principal.</p>
+    <p>Você pode solicitar informação sobre os mecanismos aplicados ao seu caso pelo canal do encarregado.</p>
+
+    <h2 id="retencao">10. Retenção</h2>
+    <p>Dados são mantidos pelo tempo necessário à finalidade. Quando o prazo termina, são eliminados ou anonimizados, salvo hipótese legal de conservação.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Prazos de retenção por categoria.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Categoria</th>
+            <th scope="col">Prazo padrão</th>
+            <th scope="col">Fundamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Registros técnicos de acesso</th>
+            <td>Até 90 dias</td>
+            <td>Segurança e diagnóstico (legítimo interesse)</td>
+          </tr>
+          <tr>
+            <th scope="row">Mensagens de contato</th>
+            <td>Até 24 meses após a última interação</td>
+            <td>Histórico e continuidade do atendimento</td>
+          </tr>
+          <tr>
+            <th scope="row">Traces e prompts de IA</th>
+            <td>Até 30 dias</td>
+            <td>Qualidade, depuração e segurança</td>
+          </tr>
+          <tr>
+            <th scope="row">Memória de assistente</th>
+            <td>Até você apagar</td>
+            <td>Funcionalidade escolhida por você</td>
+          </tr>
+          <tr>
+            <th scope="row">Dados de clientes e contratos</th>
+            <td>Vigência + prazos legais e prescricionais</td>
+            <td>Execução do contrato e exercício de direitos</td>
+          </tr>
+          <tr>
+            <th scope="row">Documentos fiscais e financeiros</th>
+            <td>5 anos, quando houver cobrança</td>
+            <td>Obrigação fiscal e contábil</td>
+          </tr>
+          <tr>
+            <th scope="row">Backups</th>
+            <td>Até 30 dias, em ciclo rotativo</td>
+            <td>Continuidade e recuperação</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Sobre registros de acesso: o art. 15 do Marco Civil da Internet impõe guarda de 6 meses a provedores constituídos como pessoa jurídica com fins econômicos. O Jatobá Lab, nesta versão, é projeto pessoal e não se enquadra nessa obrigação; mantém 90 dias por segurança. Se o projeto se tornar pessoa jurídica com exploração econômica, o prazo legal será reavaliado e esta seção atualizada.</p>
+
+    <h2 id="seguranca">11. Segurança</h2>
+    <p>Medidas técnicas e administrativas adotadas, sem promessa de risco zero (art. 46 da LGPD):</p>
+    <ul>
+      <li><strong>Transporte:</strong> HTTPS obrigatório, com redirecionamento e HSTS.</li>
+      <li><strong>Cabeçalhos:</strong> Content Security Policy restritiva, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, Referrer-Policy e Permissions-Policy.</li>
+      <li><strong>Superfície mínima:</strong> site estático, sem banco de dados, sem login e sem JavaScript próprio.</li>
+      <li><strong>Acesso:</strong> contas administrativas com autenticação em dois fatores e princípio do menor privilégio.</li>
+      <li><strong>Segredos:</strong> chaves de API fora do repositório, em armazenamento restrito, com rotação quando houver suspeita.</li>
+      <li><strong>Fornecedores:</strong> seleção por reputação, termos de tratamento publicados e configuração de retenção mínima.</li>
+      <li><strong>Recuperação:</strong> backups rotativos e teste periódico de restauração.</li>
+      <li><strong>Revisão:</strong> revisão desta política e dos acessos a cada mudança relevante de arquitetura.</li>
+    </ul>
+    <p>Nenhum sistema é imune a falhas, erro humano ou ataque. O compromisso é reduzir a probabilidade, detectar rápido e responder com transparência quando algo acontecer.</p>
+
+    <h2 id="direitos">12. Seus direitos</h2>
+    <p>A LGPD garante a você, titular, os direitos do art. 18. A tabela mostra como cada um se aplica neste contexto.</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Direitos do titular e como exercê-los.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Direito (art. 18)</th>
+            <th scope="col">O que significa aqui</th>
+            <th scope="col">Como atende</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Confirmação e acesso</th>
+            <td>Saber se tratamos dados seus e receber cópia</td>
+            <td>Resposta por e-mail, com descrição das categorias e origem</td>
+          </tr>
+          <tr>
+            <th scope="row">Correção</th>
+            <td>Corrigir dados incompletos, inexatos ou desatualizados</td>
+            <td>Correção direta ou anotação de contestação</td>
+          </tr>
+          <tr>
+            <th scope="row">Anonimização, bloqueio ou eliminação</th>
+            <td>Tratar dados desnecessários, excessivos ou ilícitos</td>
+            <td>Eliminação ou bloqueio, com registro da medida</td>
+          </tr>
+          <tr>
+            <th scope="row">Portabilidade</th>
+            <td>Receber seus dados em formato estruturado</td>
+            <td>Entrega em JSON ou CSV, quando tecnicamente viável</td>
+          </tr>
+          <tr>
+            <th scope="row">Eliminação de dados com consentimento</th>
+            <td>Apagar o que foi tratado com base no seu consentimento</td>
+            <td>Eliminação, ressalvadas hipóteses de conservação legal</td>
+          </tr>
+          <tr>
+            <th scope="row">Informação sobre compartilhamento</th>
+            <td>Saber com quem os dados foram compartilhados</td>
+            <td>Lista de categorias de destinatários e finalidade</td>
+          </tr>
+          <tr>
+            <th scope="row">Informação sobre consentimento</th>
+            <td>Saber que você pode não consentir e o que isso implica</td>
+            <td>Explicado antes da coleta e nesta política</td>
+          </tr>
+          <tr>
+            <th scope="row">Revogação do consentimento</th>
+            <td>Retirar autorização a qualquer momento</td>
+            <td>Revogação pelo canal do encarregado, com efeito a partir do pedido</td>
+          </tr>
+          <tr>
+            <th scope="row">Oposição</th>
+            <td>Contestar tratamento baseado em legítimo interesse</td>
+            <td>Análise individual e resposta fundamentada</td>
+          </tr>
+          <tr>
+            <th scope="row">Revisão de decisão automatizada</th>
+            <td>Pedir revisão humana de decisão que afete seus interesses</td>
+            <td>Revisão por pessoa natural, com explicação dos critérios</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>12.1 Como pedir</h3>
+    <p>Envie um e-mail para <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a> com o assunto “LGPD — [seu pedido]”. Inclua:</p>
+    <ul>
+      <li>nome completo e e-mail usado no contato com o projeto;</li>
+      <li>descrição clara do que você quer (acesso, correção, eliminação etc.);</li>
+      <li>indicação da página, piloto ou data envolvida, se souber;</li>
+      <li>documento que permita verificar sua identidade, quando necessário para evitar acesso indevido.</li>
+    </ul>
+
+    <h3>12.2 Prazos e limites</h3>
+    <p>A resposta é enviada em até <strong>15 dias</strong> contados do pedido completo, conforme o art. 19 da LGPD, com declaração clara e completa. Se não for possível atender integralmente, você receberá explicação fundamentada.</p>
+    <p>Alguns pedidos encontram limites legítimos: obrigação legal de guarda, exercício regular de direitos em processo, segredo comercial e proteção de direitos de terceiros. Nesses casos, o laboratório informa o motivo e a base legal.</p>
+    <p>O atendimento é gratuito. Se você se sentir prejudicado, pode reclamar à ANPD.</p>
+
+    <h2 id="cookies">13. Cookies e tecnologias similares</h2>
+    <p>Este site <strong>não usa cookies de análise, publicidade ou rastreamento</strong> e não carrega scripts de terceiros. Por isso, não há banner de consentimento: não há nada a consentir nessa categoria.</p>
+    <p>Pode existir um <strong>cookie essencial de segurança</strong> definido pela CDN (Cloudflare), como o <code>__cf_bm</code>, usado para distinguir tráfego legítimo de bots. Ele é necessário para a proteção do serviço, não identifica você para publicidade e não é compartilhado para fins comerciais.</p>
+    <p>O servidor também registra dados técnicos de acesso (IP, data e hora, URL, user agent), tratados como registro de segurança conforme a seção 10.</p>
+
+    <h2 id="automatizadas">14. Decisões automatizadas</h2>
+    <p>O laboratório pode usar IA para classificar, resumir ou sugerir, mas <strong>não toma decisões automatizadas que afetem direitos ou interesses</strong> de pessoas sem revisão humana. Se isso mudar em algum piloto:</p>
+    <ul>
+      <li>o titular será informado de forma clara sobre os critérios e o procedimento;</li>
+      <li>será possível solicitar revisão humana, nos termos do art. 20 da LGPD;</li>
+      <li>a decisão e a revisão serão registradas.</li>
+    </ul>
+    <p>Saídas de IA em conteúdo público ou em atendimento são identificadas como geradas por assistente quando houver risco de confusão.</p>
+
+    <h2 id="incidentes">15. Incidentes de segurança</h2>
+    <p>Se houver incidente que possa acarretar risco ou dano relevante aos titulares, o laboratório:</p>
+    <ol>
+      <li>contém o incidente e preserva evidências;</li>
+      <li>avalia a natureza dos dados, os titulares afetados e o risco concreto;</li>
+      <li>comunica a ANPD e os titulares afetados, nos termos do art. 48 da LGPD, no prazo regulamentar aplicável — atualmente de 3 dias úteis pela Resolução CD/ANPD nº 15/2024, quando a comunicação for exigida;</li>
+      <li>registra o ocorrido, as medidas e as lições aprendidas;</li>
+      <li>atualiza esta política e os controles quando necessário.</li>
+    </ol>
+    <p>A comunicação descreve, de forma razoável, os dados envolvidos, os titulares afetados, as medidas técnicas de proteção, os riscos e as providências adotadas. O laboratório não esconde incidente para preservar reputação.</p>
+    <p>Para reportar uma vulnerabilidade, veja <a href="/.well-known/security.txt">security.txt</a> ou escreva para o encarregado.</p>
+
+    <h2 id="criancas">16. Crianças e adolescentes</h2>
+    <p>Os serviços do laboratório não são direcionados a menores de 18 anos e não coletam intencionalmente dados de crianças ou adolescentes. O melhor interesse do menor é observado (art. 14 da LGPD). Se você identificar que um menor enviou dados sem autorização de responsável, escreva para o encarregado: os dados serão eliminados.</p>
+
+    <h2 id="alteracoes">17. Alterações desta política</h2>
+    <p>Esta política pode mudar para refletir alterações no projeto, nos fornecedores ou na legislação. Cada versão recebe número e data no topo. Mudanças relevantes são destacadas na página inicial por pelo menos 30 dias.</p>
+    <p>Se a mudança depender de consentimento, ele será solicitado novamente antes de a nova prática valer. Versões anteriores podem ser solicitadas ao encarregado.</p>
+
+    <h2 id="contato">18. Contato e ANPD</h2>
+    <dl class="deflist">
+      <dt>Encarregado (DPO)</dt>
+      <dd>Gabriel Jatobá</dd>
+
+      <dt>E-mail</dt>
+      <dd><a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></dd>
+
+      <dt>Assunto sugerido</dt>
+      <dd>“LGPD — [acesso / correção / eliminação / incidente / outro]”</dd>
+
+      <dt>Prazo de resposta</dt>
+      <dd>Até 15 dias (art. 19 da LGPD)</dd>
+
+      <dt>Autoridade</dt>
+      <dd>Autoridade Nacional de Proteção de Dados (ANPD) — <a href="https://www.gov.br/anpd/" rel="noopener noreferrer">gov.br/anpd</a></dd>
+    </dl>
+    <p>Se a resposta do encarregado não resolver, você pode apresentar reclamação à ANPD. O laboratório colabora com a autoridade e com o titular em qualquer procedimento.</p>
+
+    <div class="callout">
+      <span class="callout-title">Transparência sobre o estágio do projeto</span>
+      <p>Este documento é a versão 1.0 de um projeto pessoal em formação. Ele não substitui revisão jurídica profissional antes de uso comercial em escala, contratação de equipe ou tratamento de dados sensíveis. As lacunas conhecidas estão listadas na página <a href="/lgpd.html">LGPD &amp; Governança</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p><strong>Jatobá Lab</strong> — projeto pessoal de Gabriel Jatobá. Brasil.</p>
+        <p>Privacidade e DPO: <a href="mailto:gabrielvjatoba@gmail.com">gabrielvjatoba@gmail.com</a></p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos</a></li>
+          <li><a href="/lgpd.html">LGPD</a></li>
+          <li><a href="/modelo.html">Modelo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="fine">Versão 1.0 · Última atualização: 3 de novembro de 2026. Conteúdo informativo; não constitui parecer jurídico. Este site não usa cookies de análise ou publicidade.</p>
+  </div>
+</footer>
+</body>
+</html>

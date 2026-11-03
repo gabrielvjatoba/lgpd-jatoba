@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Sem áreas privadas neste site.
+# Conteúdo informativo público, sem parâmetros de rastreamento.
+
+Sitemap: https://lgpd.jatoba.tech/sitemap.xml
